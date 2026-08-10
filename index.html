@@ -1397,20 +1397,20 @@ function playSlowDoubleBeep(){
     if (audioCtx.state === 'suspended') audioCtx.resume();
 
     const now = audioCtx.currentTime;
-    // 같은 음 높이로 천천히 두 번 (하나 / 둘)
-    [0, 0.65].forEach(delay => {
+    // 같은 음 높이로 천천히 두 번 (하나 / 둘) — 각 1초씩
+    [0, 1.2].forEach(delay => {
       const osc = audioCtx.createOscillator();
       const gain = audioCtx.createGain();
       osc.type = 'sine';
       osc.frequency.value = 660;
       gain.gain.setValueAtTime(0, now + delay);
-      gain.gain.linearRampToValueAtTime(0.28, now + delay + 0.03);
-      gain.gain.setValueAtTime(0.28, now + delay + 0.22);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + delay + 0.4);
+      gain.gain.linearRampToValueAtTime(0.28, now + delay + 0.04);
+      gain.gain.setValueAtTime(0.28, now + delay + 0.85);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + delay + 1.0);
       osc.connect(gain);
       gain.connect(audioCtx.destination);
       osc.start(now + delay);
-      osc.stop(now + delay + 0.45);
+      osc.stop(now + delay + 1.05);
     });
   } catch(e) { /* 오디오 미지원 환경은 무시 */ }
 }
@@ -1533,7 +1533,7 @@ function speakWithCaptions(text){
   const msPerChar = 165 / Math.max(speechRate, 0.4);
   const gapMs = 230 / Math.max(speechRate, 0.4);
   // "하나 둘" 구간은 비프음 두 번(약 1.1초)이 끝날 시간을 확보해야 하므로 속도와 무관하게 고정
-  const BEEP_SLOT_MS = 1300;
+  const BEEP_SLOT_MS = 2400;
 
   let t = 0;
   allPhrases.forEach((p, idx) => {
