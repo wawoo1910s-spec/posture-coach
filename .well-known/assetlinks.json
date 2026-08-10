@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "kr.soonhwan.jaseSsam",
+        "sha256_cert_fingerprints": ["E3:C2:53:AA:F7:5F:A2:64:FF:CC:1F:CF:57:ED:E9:63:A0:0B:F1:FF:F8:DA:05:3B:25:D5:C7:1E:7E:74:6A:15"]
+      }
+    }]
