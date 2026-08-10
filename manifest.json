@@ -1,4 +1,5 @@
 {
+  "id": "kr.soonhwan.jaseSsam",
   "name": "자세쌤-24시간자세교정 알림",
   "short_name": "자세쌤",
   "description": "바른 자세는 결심으로 유지되지 않습니다. 40분마다 음성이 알려주면 몸이 알아서 리셋됩니다. 12년차 물리치료사가 만든 목·허리·어깨·골반 자세교정 알림 앱.",
@@ -11,6 +12,29 @@
   "lang": "ko",
   "dir": "ltr",
   "categories": ["health", "lifestyle", "productivity"],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1080x2400",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "부위와 자세, 알림 간격을 선택하는 화면"
+    },
+    {
+      "src": "screenshot2.png",
+      "sizes": "1080x2400",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "다음 안내까지 남은 시간을 보여주는 타이머"
+    },
+    {
+      "src": "screenshot3.png",
+      "sizes": "1080x2400",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "음성과 자막으로 자세교정을 안내하는 화면"
+    }
+  ],
   "icons": [
     {
       "src": "favicon-32.png",
