@@ -1157,6 +1157,7 @@ function renderStats(){
 let intervalMin = 40;
 let remainingSec = intervalMin * 60;
 let timerId = null;
+let nextAlertAt = null; // 다음 알림 예정 시각(타임스탬프) — 백그라운드에서도 밀리지 않게
 let running = false;
 let paused = false;
 let todayCount = 0;
@@ -1701,22 +1702,52 @@ el.dismissBtn.addEventListener('click', () => {
   el.overlay.classList.remove('show');
   stopCaptionedSpeech();
   remainingSec = intervalMin * 60;
-  updateCountdown();
+  if (running && !paused){
+    nextAlertAt = Date.now() + intervalMin * 60 * 1000;
+    updateCountdown();
+  }
 });
 
 el.replayBtn.addEventListener('click', () => {
   if (currentTip) speakWithCaptions(currentTip.text);
 });
 
+// 남은 시간을 "예정 시각 - 현재 시각"으로 계산한다.
+// (1초씩 빼는 방식은 브라우저가 백그라운드에서 타이머를 늦추거나 멈춰서 시간이 밀린다.)
+function syncRemaining(){
+  if (nextAlertAt == null) return;
+  remainingSec = Math.max(0, Math.round((nextAlertAt - Date.now()) / 1000));
+}
+
 function tick(){
-  remainingSec -= 1;
-  const total = intervalMin * 60;
+  if (nextAlertAt == null) return;
+  syncRemaining();
   updateCountdown();
-  if (remainingSec <= 0){
+  if (Date.now() >= nextAlertAt){
     triggerAlert();
-    remainingSec = total;
+    // 밀린 시간이 아무리 길어도 다음 알림은 지금부터 한 주기 뒤로 재설정
+    nextAlertAt = Date.now() + intervalMin * 60 * 1000;
+    syncRemaining();
+    updateCountdown();
   }
 }
+
+// 화면이 다시 보이거나 창에 포커스가 돌아오면 즉시 시간 재동기화
+function resyncTimer(){
+  if (!running || paused || nextAlertAt == null) return;
+  if (Date.now() >= nextAlertAt){
+    tick(); // 자리를 비운 사이 시각이 지났으면 바로 안내
+  } else {
+    syncRemaining();
+    updateCountdown();
+  }
+}
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') resyncTimer();
+});
+window.addEventListener('focus', resyncTimer);
+window.addEventListener('pageshow', resyncTimer);
 
 el.startBtn.addEventListener('click', () => {
   if (running) return;
@@ -1738,6 +1769,7 @@ el.startBtn.addEventListener('click', () => {
   if (voiceSelectEl) voiceSelectEl.disabled = true;
   if (fullTestBtnEl) fullTestBtnEl.disabled = true;
   remainingSec = intervalMin * 60;
+  nextAlertAt = Date.now() + intervalMin * 60 * 1000;
   updateCountdown();
   timerId = setInterval(tick, 1000);
   // 사용자 조작 시점에 오디오 활성화 (모바일 자동재생 정책 대응)
@@ -1756,12 +1788,15 @@ el.pauseBtn.addEventListener('click', () => {
   if (!paused){
     paused = true;
     clearInterval(timerId);
+    syncRemaining();       // 멈춘 시점의 남은 시간을 확정
+    nextAlertAt = null;
     el.pauseBtn.textContent = '재개';
     el.statusWord.textContent = '일시정지됨';
     el.statusWord.className = 'status-word drift';
     releaseWakeLock();
   } else {
     paused = false;
+    nextAlertAt = Date.now() + remainingSec * 1000; // 남은 시간만큼 다시 예약
     timerId = setInterval(tick, 1000);
     el.pauseBtn.textContent = '일시정지';
     el.statusWord.textContent = '다음 안내까지';
@@ -1784,6 +1819,7 @@ el.stopBtn.addEventListener('click', () => {
   if (voiceSelectEl) voiceSelectEl.disabled = false;
   if (fullTestBtnEl) fullTestBtnEl.disabled = false;
   remainingSec = intervalMin * 60;
+  nextAlertAt = null;
   el.statusWord.textContent = '정렬 대기';
   el.statusWord.className = 'status-word aligned';
   el.countdown.classList.add('idle');
