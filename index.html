@@ -695,7 +695,8 @@
   .caption-dot.done{ background:var(--accent); opacity:0.45; }
   .caption-dot.active{ background:var(--accent); transform:scale(1.5); }
 
-  .overlay-actions{ display:flex; gap:10px; }
+  .overlay-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+  .overlay-actions .btn{ min-width:88px; }
 </style>
 </head>
 <body>
@@ -810,19 +811,6 @@
       <button class="interval-btn" data-min="20">20분</button>
       <button class="interval-btn active" data-min="40">40분</button>
       <button class="interval-btn" data-min="60">60분</button>
-    </div>
-    <div class="card-title">음성 선택</div>
-    <div class="voice-row">
-      <select class="voice-select" id="voiceSelect">
-        <option value="">기본 음성</option>
-      </select>
-      <button class="voice-test-btn" id="voiceTestBtn">미리듣기</button>
-    </div>
-    <div class="card-title">음성 속도</div>
-    <div class="interval-grid" id="speedGrid">
-      <button class="interval-btn" data-rate="0.75">느리게</button>
-      <button class="interval-btn active" data-rate="0.95">보통</button>
-      <button class="interval-btn" data-rate="1.2">빠르게</button>
     </div>
     <div class="mode-grid" id="soundGrid">
       <button class="mode-btn active" data-sound="on">알림음 켜기</button>
@@ -944,8 +932,9 @@
     <div class="caption-progress" id="captionProgress"></div>
     <div class="overlay-text" id="overlayText"></div>
     <div class="overlay-actions">
-      <button class="btn btn-primary" id="dismissBtn">확인했어요</button>
-      <button class="btn btn-danger" id="replayBtn">다시 듣기</button>
+      <button class="btn btn-primary" id="dismissBtn">계속</button>
+      <button class="btn btn-ghost" id="replayBtn">다시 듣기</button>
+      <button class="btn btn-danger" id="endBtn">종료</button>
     </div>
   </div>
 </div>
@@ -1020,10 +1009,8 @@ const TIP_LIBRARY = {
 
 let mode = 'sitting';
 let selectedPart = '전신';
-let availableVoices = [];
-let selectedVoiceURI = '';
 let soundEnabled = true;
-let speechRate = 0.95;
+const speechRate = 0.95; // 음성 속도는 하나로 통일 (사용자 선택 불가)
 let wakeLock = null;
 let currentUtterance = null; // GC로 인한 무음 방지용 참조 유지
 let currentCaptionTimers = []; // 자막 스케줄 타이머 (취소용)
@@ -1039,9 +1026,7 @@ function saveSettings(){
       part: selectedPart,
       mode: mode,
       interval: intervalMin,
-      voice: selectedVoiceURI,
-      sound: soundEnabled,
-      rate: speechRate
+      sound: soundEnabled
     }));
   } catch(e) { /* 저장 불가 환경은 무시 */ }
 }
@@ -1177,7 +1162,8 @@ const el = {
   overlayTitle: document.getElementById('overlayTitle'),
   overlayText: document.getElementById('overlayText'),
   dismissBtn: document.getElementById('dismissBtn'),
-  replayBtn: document.getElementById('replayBtn')
+  replayBtn: document.getElementById('replayBtn'),
+  endBtn: document.getElementById('endBtn')
 };
 
 el.partGrid.addEventListener('click', (e) => {
@@ -1259,43 +1245,6 @@ if (copyBtnEl){
   copyBtnEl.addEventListener('click', copyLink);
 }
 
-const voiceSelectEl = document.getElementById('voiceSelect');
-const voiceTestBtnEl = document.getElementById('voiceTestBtn');
-
-if (voiceSelectEl){
-  voiceSelectEl.addEventListener('change', () => {
-    selectedVoiceURI = voiceSelectEl.value;
-    saveSettings();
-  });
-}
-
-if (voiceTestBtnEl){
-  voiceTestBtnEl.addEventListener('click', () => {
-    speak('안녕하세요. 자세쌤입니다. 목에 힘 빼고, 한숨 돌리고, 다시 시작.');
-  });
-}
-
-if ('speechSynthesis' in window){
-  populateVoices();
-  window.speechSynthesis.onvoiceschanged = populateVoices;
-  // 일부 브라우저는 목록 로딩이 늦어 한 번 더 시도
-  setTimeout(populateVoices, 500);
-  setTimeout(populateVoices, 1500);
-}
-
-const speedGridEl = document.getElementById('speedGrid');
-if (speedGridEl){
-  speedGridEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('.interval-btn');
-    if (!btn) return;
-    speedGridEl.querySelectorAll('.interval-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    speechRate = parseFloat(btn.dataset.rate);
-    saveSettings();
-    speak('목에 힘 빼고, 한숨 돌리고, 다시 시작.');
-  });
-}
-
 const soundGridEl = document.getElementById('soundGrid');
 if (soundGridEl){
   soundGridEl.addEventListener('click', (e) => {
@@ -1342,24 +1291,8 @@ function updateCountdown(){
 }
 
 function populateVoices(){
-  if (!('speechSynthesis' in window)) return;
-  const all = window.speechSynthesis.getVoices();
-  if (!all.length) return;
-  // 한국어 음성 우선, 없으면 전체 표시
-  const ko = all.filter(v => v.lang && v.lang.toLowerCase().startsWith('ko'));
-  availableVoices = ko.length ? ko : all;
-
-  const sel = document.getElementById('voiceSelect');
-  if (!sel) return;
-  const prev = sel.value;
-  sel.innerHTML = '<option value="">기본 음성</option>';
-  availableVoices.forEach(v => {
-    const opt = document.createElement('option');
-    opt.value = v.voiceURI;
-    opt.textContent = v.name + (ko.length ? '' : ' (' + v.lang + ')');
-    sel.appendChild(opt);
-  });
-  if (prev) sel.value = prev;
+  // 음성 선택 UI가 없으므로 목록을 화면에 반영할 필요가 없다.
+  // (speechSynthesis voiceschanged 이벤트가 남아있을 수 있어 함수 자체는 무해하게 유지)
 }
 
 /* ---------- 알림음 (Web Audio) ---------- */
@@ -1456,13 +1389,7 @@ function speak(text){
   utter.lang = 'ko-KR';
   utter.rate = speechRate;
   const voices = window.speechSynthesis.getVoices();
-  let chosen = null;
-  if (selectedVoiceURI){
-    chosen = voices.find(v => v.voiceURI === selectedVoiceURI);
-  }
-  if (!chosen){
-    chosen = voices.find(v => v.lang === 'ko-KR');
-  }
+  const chosen = voices.find(v => v.lang === 'ko-KR');
   if (chosen) utter.voice = chosen;
   window.speechSynthesis.speak(utter);
 }
@@ -1474,10 +1401,7 @@ let captionCancelled = false;
 
 function pickVoice(){
   const voices = window.speechSynthesis.getVoices();
-  let chosen = null;
-  if (selectedVoiceURI) chosen = voices.find(v => v.voiceURI === selectedVoiceURI);
-  if (!chosen) chosen = voices.find(v => v.lang === 'ko-KR');
-  return chosen || null;
+  return voices.find(v => v.lang === 'ko-KR') || null;
 }
 
 // "등 기대고, 머리 기대고, ... 다시 시작." → 구절 배열
@@ -1712,6 +1636,13 @@ el.replayBtn.addEventListener('click', () => {
   if (currentTip) speakWithCaptions(currentTip.text);
 });
 
+el.endBtn.addEventListener('click', () => {
+  el.overlay.classList.remove('show');
+  stopCaptionedSpeech();
+  // 정지 버튼과 동일한 로직(반복 알림 종료, 네이티브 알람 취소 등)을 그대로 재사용
+  if (running && !el.stopBtn.disabled) el.stopBtn.click();
+});
+
 // 남은 시간을 "예정 시각 - 현재 시각"으로 계산한다.
 // (1초씩 빼는 방식은 브라우저가 백그라운드에서 타이머를 늦추거나 멈춰서 시간이 밀린다.)
 function syncRemaining(){
@@ -1766,7 +1697,6 @@ el.startBtn.addEventListener('click', () => {
   el.grid.querySelectorAll('.interval-btn').forEach(b => b.disabled = true);
   el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.disabled = true);
   document.querySelectorAll('.part-btn').forEach(b => b.disabled = true);
-  if (voiceSelectEl) voiceSelectEl.disabled = true;
   if (fullTestBtnEl) fullTestBtnEl.disabled = true;
   remainingSec = intervalMin * 60;
   nextAlertAt = Date.now() + intervalMin * 60 * 1000;
@@ -1816,7 +1746,6 @@ el.stopBtn.addEventListener('click', () => {
   el.grid.querySelectorAll('.interval-btn').forEach(b => b.disabled = false);
   el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.disabled = false);
   document.querySelectorAll('.part-btn').forEach(b => b.disabled = false);
-  if (voiceSelectEl) voiceSelectEl.disabled = false;
   if (fullTestBtnEl) fullTestBtnEl.disabled = false;
   remainingSec = intervalMin * 60;
   nextAlertAt = null;
@@ -1869,26 +1798,6 @@ el.stopBtn.addEventListener('click', () => {
     soundGridEl.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
     const sndBtn = soundGridEl.querySelector('.mode-btn[data-sound="' + (s.sound ? 'on' : 'off') + '"]');
     if (sndBtn) sndBtn.classList.add('active');
-  }
-
-  // 음성 속도
-  if (typeof s.rate === 'number' && speedGridEl){
-    speechRate = s.rate;
-    speedGridEl.querySelectorAll('.interval-btn').forEach(b => b.classList.remove('active'));
-    const rateBtn = speedGridEl.querySelector('.interval-btn[data-rate="' + s.rate + '"]');
-    if (rateBtn) rateBtn.classList.add('active');
-  }
-
-  // 음성은 목록 로딩 후 적용
-  if (s.voice){
-    selectedVoiceURI = s.voice;
-    const applyVoice = () => {
-      if (voiceSelectEl && voiceSelectEl.querySelector('option[value="' + s.voice + '"]')){
-        voiceSelectEl.value = s.voice;
-      }
-    };
-    setTimeout(applyVoice, 600);
-    setTimeout(applyVoice, 1600);
   }
 })();
 
