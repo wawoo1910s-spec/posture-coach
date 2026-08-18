@@ -483,6 +483,47 @@
   }
   .info-item b{ color:var(--ink); }
 
+  .howto-steps{
+    counter-reset: howto;
+    padding-top:12px;
+    border-top:1px solid rgba(0,0,0,0.06);
+    margin-top:12px;
+  }
+  .howto-step{
+    display:flex;
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .howto-step:last-child{ margin-bottom:0; }
+  .howto-num{
+    counter-increment: howto;
+    flex-shrink:0;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:13px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .howto-num::before{ content: counter(howto); }
+  .howto-text{ flex:1; padding-top:2px; }
+  .howto-text b{
+    display:block;
+    font-size:13px;
+    color:var(--ink);
+    margin-bottom:2px;
+  }
+  .howto-text span{
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+
   .ad-slot{
     width:320px;
     max-width:100%;
@@ -876,7 +917,29 @@
           <b>안내</b> — 이 탭을 열어둔 상태에서만 타이머가 동작합니다. 처음 시작할 때 브라우저가 알림·음성 권한을 물으면 허용해 주세요.
         </div>
         <div class="info-item">
-          <b>사용법</b> — 시간이 되면 음성 안내에 따라 자세교정 동작을 실행하고, 바로 하던 일을 다시 이어가시면 됩니다.
+          <b>사용법</b>
+          <div class="howto-steps">
+            <div class="howto-step">
+              <span class="howto-num"></span>
+              <div class="howto-text"><b>부위 선택</b><span>지금 제일 신경 쓰이는 곳 하나를 고르세요</span></div>
+            </div>
+            <div class="howto-step">
+              <span class="howto-num"></span>
+              <div class="howto-text"><b>자세 모드 선택</b><span>사무실이면 앉은자세, 자기 전이면 누운자세로</span></div>
+            </div>
+            <div class="howto-step">
+              <span class="howto-num"></span>
+              <div class="howto-text"><b>알림 간격 선택</b><span>20 · 40 · 60분 중 선택 (처음이면 40분 추천)</span></div>
+            </div>
+            <div class="howto-step">
+              <span class="howto-num"></span>
+              <div class="howto-text"><b>시작 버튼</b><span>누르고 하던 일을 계속하세요. 화면을 꺼두셔도 됩니다</span></div>
+            </div>
+            <div class="howto-step">
+              <span class="howto-num"></span>
+              <div class="howto-text"><b>알림이 오면</b><span>음성 안내대로 짧게 몸을 풀어주고 '계속'을 눌러 다시 시작</span></div>
+            </div>
+          </div>
         </div>
         <div class="info-item">
           <b>추천 사용 시간</b> — 일할 때, 그리고 휴식할 때(특히 저녁 시간)에 사용하시면 좋습니다.
