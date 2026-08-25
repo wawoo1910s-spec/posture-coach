@@ -1,1873 +1,2215 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJZWPFCQBG"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-KJZWPFCQBG');
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자세쌤 — 자세는 의지가 아니라 알림으로 고칩니다</title>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJZWPFCQBG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KJZWPFCQBG');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자세쌤 — 자세는 의지가 아니라 알림으로 고칩니다</title>
 
-    <!-- SEO -->
-    <meta name="description" content="바른 자세는 결심으로 유지되지 않습니다. 40분마다 음성이 알려주면 몸이 알아서 리셋됩니다. 12년차 물리치료사가 만든 목·허리·어깨·골반 자세교정 알림 앱.">
-    <meta name="author" content="순환자세연구소">
-    <meta name="keywords" content="자세교정, 거북목, 라운드숄더, 허리통증, 스트레칭 알림, 물리치료사, 자세 알리미">
-    <link rel="canonical" href="https://wawoo1910s-spec.github.io/posture-coach/">
+  <!-- SEO -->
+  <meta name="description" content="바른 자세는 결심으로 유지되지 않습니다. 40분마다 음성이 알려주면 몸이 알아서 리셋됩니다. 12년차 물리치료사가 만든 목·허리·어깨·골반 자세교정 알림 앱.">
+  <meta name="author" content="순환자세연구소">
+  <meta name="keywords" content="자세교정, 거북목, 라운드숄더, 허리통증, 스트레칭 알림, 물리치료사, 자세 알리미">
+  <link rel="canonical" href="https://wawoo1910s-spec.github.io/posture-coach/">
 
-    <!-- 오픈그래프 (카카오톡/페이스북 공유용) -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="자세쌤">
-    <meta property="og:title" content="자세쌤 — 자세는 의지가 아니라 알림으로 고칩니다">
-    <meta property="og:description" content="바른 자세는 결심으로 유지되지 않습니다. 40분마다 음성이 알려주면 됩니다. 목·허리·어깨·골반, 앉은자세/누운자세 선택 가능한 무료 앱.">
-    <meta property="og:url" content="https://wawoo1910s-spec.github.io/posture-coach/">
-    <meta property="og:image" content="https://wawoo1910s-spec.github.io/posture-coach/og-image-square.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="1200">
-    <meta property="og:locale" content="ko_KR">
+  <!-- 오픈그래프 (카카오톡/페이스북 공유용) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="자세쌤">
+  <meta property="og:title" content="자세쌤 — 자세는 의지가 아니라 알림으로 고칩니다">
+  <meta property="og:description" content="바른 자세는 결심으로 유지되지 않습니다. 40분마다 음성이 알려주면 됩니다. 목·허리·어깨·골반, 앉은자세/누운자세 선택 가능한 무료 앱.">
+  <meta property="og:url" content="https://wawoo1910s-spec.github.io/posture-coach/">
+  <meta property="og:image" content="https://wawoo1910s-spec.github.io/posture-coach/og-image-square.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:locale" content="ko_KR">
 
-    <!-- 트위터 카드 -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="자세쌤 — 자세는 의지가 아니라 알림으로 고칩니다">
-    <meta name="twitter:description" content="바른 자세는 결심으로 유지되지 않습니다. 40분마다 음성이 알려주는 무료 자세교정 앱.">
-    <meta name="twitter:image" content="https://wawoo1910s-spec.github.io/posture-coach/og-image-square.png">
+  <!-- 트위터 카드 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="자세쌤 — 자세는 의지가 아니라 알림으로 고칩니다">
+  <meta name="twitter:description" content="바른 자세는 결심으로 유지되지 않습니다. 40분마다 음성이 알려주는 무료 자세교정 앱.">
+  <meta name="twitter:image" content="https://wawoo1910s-spec.github.io/posture-coach/og-image-square.png">
 
-    <!-- 파비콘 / 앱 아이콘 -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <meta name="theme-color" content="#2E6B5B">
+  <!-- 파비콘 / 앱 아이콘 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#2E6B5B">
 
-    <!-- PWA (홈 화면 설치) -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="자세쌤">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root{
-          --bg: #F4F6F5;
-          --surface: #FFFFFF;
-          --ink: #1C2B2A;
-          --ink-soft: #5B6D6A;
-          --line: #DCE3E1;
-          --accent: #2F6F62;
-          --accent-soft: #E4EEEC;
-          --alert: #8B4A3D;
-          --alert-soft: #F4E7E3;
-        }
-        *{ box-sizing:border-box; margin:0; padding:0; }
-        html,body{ min-height:100%; }
-        body{
-          background:var(--bg);
-          color:var(--ink);
-          font-family:'Inter',sans-serif;
-          min-height:100vh;
-          display:flex;
-          align-items:flex-start;
-          justify-content:center;
-          padding:32px 20px;
-        }
-        .app{
-          width:100%;
-          max-width:460px;
-        }
-        .eyebrow{
-          font-family:'IBM Plex Mono',monospace;
-          font-size:13px;
-          letter-spacing:0.14em;
-          color:var(--ink-soft);
-          text-transform:uppercase;
-          margin-bottom:8px;
-        }
-        h1{
-          font-family:'Space Grotesk',sans-serif;
-          font-size:40px;
-          font-weight:700;
-          letter-spacing:-0.01em;
-          margin-bottom:8px;
-        }
-        .sub{
-          color:var(--ink-soft);
-          font-size:17px;
-          margin-bottom:20px;
-          line-height:1.5;
-        }
-        .credential-badge{
-          display:inline-flex;
-          align-items:center;
-          gap:6px;
-          font-family:'IBM Plex Mono',monospace;
-          font-size:13px;
-          font-weight:500;
-          color:var(--accent);
-          background:var(--accent-soft);
-          padding:6px 12px;
-          border-radius:999px;
-          margin-bottom:28px;
-        }
-        .credential-badge::before{
-          content:"";
-          width:6px;
-          height:6px;
-          border-radius:50%;
-          background:var(--accent);
-          flex-shrink:0;
-        }
+  <!-- PWA (홈 화면 설치) -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="자세쌤">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #F4F6F5;
+      --surface: #FFFFFF;
+      --ink: #1C2B2A;
+      --ink-soft: #5B6D6A;
+      --line: #DCE3E1;
+      --accent: #2F6F62;
+      --accent-soft: #E4EEEC;
+      --alert: #8B4A3D;
+      --alert-soft: #F4E7E3;
+    }
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    html,body{ min-height:100%; }
+    body{
+      background:var(--bg);
+      color:var(--ink);
+      font-family:'Inter',sans-serif;
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:32px 20px;
+    }
+    .app{
+      width:100%;
+      max-width:460px;
+    }
+    .eyebrow{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:13px;
+      letter-spacing:0.14em;
+      color:var(--ink-soft);
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+    h1{
+      font-family:'Space Grotesk',sans-serif;
+      font-size:40px;
+      font-weight:700;
+      letter-spacing:-0.01em;
+      margin-bottom:8px;
+    }
+    .sub{
+      color:var(--ink-soft);
+      font-size:17px;
+      margin-bottom:20px;
+      line-height:1.5;
+    }
+    .credential-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-family:'IBM Plex Mono',monospace;
+      font-size:13px;
+      font-weight:500;
+      color:var(--accent);
+      background:var(--accent-soft);
+      padding:6px 12px;
+      border-radius:999px;
+      margin-bottom:28px;
+    }
+    .credential-badge::before{
+      content:"";
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:var(--accent);
+      flex-shrink:0;
+    }
 
-        /* Signature element: large countdown timer */
-        .align-wrap{
-          background:var(--surface);
-          border:1px solid var(--line);
-          border-radius:20px;
-          padding:32px 28px;
-          margin-bottom:20px;
-          text-align:center;
-        }
-        .status-word{
-          font-family:'Space Grotesk',sans-serif;
-          font-size:20px;
-          font-weight:600;
-          margin-bottom:10px;
-          transition: color 0.4s;
-        }
-        .status-word.drift{ color:var(--alert); }
-        .status-word.aligned{ color:var(--accent); }
-        .countdown{
-          font-family:'IBM Plex Mono',monospace;
-          font-size:76px;
-          font-weight:600;
-          color:var(--ink);
-          letter-spacing:0.02em;
-          line-height:1.1;
-        }
-        .countdown.idle{
-          font-size:19px;
-          font-weight:500;
-          color:var(--ink-soft);
-          font-family:'Inter',sans-serif;
-        }
-        .countdown b{ font-weight:600; }
+    /* Signature element: large countdown timer */
+    .align-wrap{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:32px 28px;
+      margin-bottom:20px;
+      text-align:center;
+    }
+    .status-word{
+      font-family:'Space Grotesk',sans-serif;
+      font-size:20px;
+      font-weight:600;
+      margin-bottom:10px;
+      transition: color 0.4s;
+    }
+    .status-word.drift{ color:var(--alert); }
+    .status-word.aligned{ color:var(--accent); }
+    .countdown{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:76px;
+      font-weight:600;
+      color:var(--ink);
+      letter-spacing:0.02em;
+      line-height:1.1;
+    }
+    .countdown.idle{
+      font-size:19px;
+      font-weight:500;
+      color:var(--ink-soft);
+      font-family:'Inter',sans-serif;
+    }
+    .countdown b{ font-weight:600; }
 
-        /* Controls */
-        .card{
-          background:var(--surface);
-          border:1px solid var(--line);
-          border-radius:20px;
-          padding:24px 24px 26px;
-          margin-bottom:16px;
-        }
-        .card-title{
-          font-family:'Space Grotesk',sans-serif;
-          font-size:16px;
-          font-weight:600;
-          margin-bottom:14px;
-          color:var(--ink);
-        }
-        .part-grid{
-          display:grid;
-          grid-template-columns:repeat(4,1fr);
-          gap:8px;
-          margin-bottom:18px;
-        }
-        .part-btn{
-          font-family:'Inter',sans-serif;
-          font-size:14px;
-          font-weight:600;
-          padding:12px 4px;
-          border-radius:10px;
-          border:1px solid var(--line);
-          background:var(--bg);
-          color:var(--ink-soft);
-          cursor:pointer;
-          transition:all 0.15s;
-        }
-        .part-btn:hover{ border-color:var(--accent); }
-        .part-btn.active{
-          background:var(--accent);
-          border-color:var(--accent);
-          color:#fff;
-        }
-        .part-hint{
-          font-family:'IBM Plex Mono',monospace;
-          font-size:12px;
-          color:var(--ink-soft);
-          margin:-10px 0 18px;
-        }
-        .mode-grid{
-          display:grid;
-          grid-template-columns:repeat(2,1fr);
-          gap:8px;
-          margin-bottom:18px;
-        }
-        .mode-btn{
-          font-family:'Inter',sans-serif;
-          font-size:15px;
-          font-weight:600;
-          padding:14px 8px;
-          border-radius:10px;
-          border:1px solid var(--line);
-          background:var(--bg);
-          color:var(--ink-soft);
-          cursor:pointer;
-          transition:all 0.15s;
-        }
-        .mode-btn:hover{ border-color:var(--accent); }
-        .mode-btn.active{
-          background:var(--accent);
-          border-color:var(--accent);
-          color:#fff;
-        }
-        .interval-grid{
-          display:grid;
-          grid-template-columns:repeat(3,1fr);
-          gap:8px;
-          margin-bottom:20px;
-        }
-        .interval-btn{
-          font-family:'IBM Plex Mono',monospace;
-          font-size:15px;
-          font-weight:500;
-          padding:12px 4px;
-          border-radius:10px;
-          border:1px solid var(--line);
-          background:var(--bg);
-          color:var(--ink-soft);
-          cursor:pointer;
-          transition:all 0.15s;
-        }
-        .interval-btn:hover{ border-color:var(--accent); }
-        .interval-btn.active{
-          background:var(--accent);
-          border-color:var(--accent);
-          color:#fff;
-        }
-        .actions{
-          display:flex;
-          gap:10px;
-        }
-        .btn{
-          flex:1;
-          font-family:'Inter',sans-serif;
-          font-size:16px;
-          font-weight:600;
-          padding:15px 12px;
-          border-radius:12px;
-          border:none;
-          cursor:pointer;
-          transition:opacity 0.15s, transform 0.1s;
-        }
-        .btn:active{ transform:scale(0.98); }
-        .btn-primary{ background:var(--accent); color:#fff; }
-        .btn-primary:disabled{ opacity:0.4; cursor:default; }
-        .interval-btn:disabled,
-        .mode-btn:disabled,
-        .part-btn:disabled{ opacity:0.5; cursor:default; }
-        .interval-btn:disabled:hover,
-        .mode-btn:disabled:hover,
-        .part-btn:disabled:hover{ border-color:var(--line); }
-        .btn-ghost{ background:var(--bg); color:var(--ink); border:1px solid var(--line); }
-        .btn-ghost:disabled{ opacity:0.4; cursor:default; }
-        .btn-danger{ background:var(--alert-soft); color:var(--alert); }
+    /* Controls */
+    .card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px 24px 26px;
+      margin-bottom:16px;
+    }
+    .card-title{
+      font-family:'Space Grotesk',sans-serif;
+      font-size:16px;
+      font-weight:600;
+      margin-bottom:14px;
+      color:var(--ink);
+    }
+    .part-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+      margin-bottom:18px;
+    }
+    .part-btn{
+      font-family:'Inter',sans-serif;
+      font-size:14px;
+      font-weight:600;
+      padding:12px 4px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:var(--bg);
+      color:var(--ink-soft);
+      cursor:pointer;
+      transition:all 0.15s;
+    }
+    .part-btn:hover{ border-color:var(--accent); }
+    .part-btn.active{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:#fff;
+    }
+    .part-hint{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:12px;
+      color:var(--ink-soft);
+      margin:-10px 0 18px;
+    }
+    .sub-grid{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+      margin-bottom:18px;
+    }
+    .sub-btn{
+      font-family:'Inter',sans-serif;
+      font-size:13px;
+      font-weight:600;
+      padding:9px 13px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:var(--bg);
+      color:var(--ink-soft);
+      cursor:pointer;
+      transition:all 0.15s;
+    }
+    .sub-btn:hover{ border-color:var(--accent); }
+    .sub-btn.active{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:#fff;
+    }
+    .sub-btn:disabled{ opacity:0.5; cursor:default; }
+    .sub-btn:disabled:hover{ border-color:var(--line); }
+    .mode-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:8px;
+      margin-bottom:18px;
+    }
+    .mode-btn{
+      font-family:'Inter',sans-serif;
+      font-size:15px;
+      font-weight:600;
+      padding:14px 8px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:var(--bg);
+      color:var(--ink-soft);
+      cursor:pointer;
+      transition:all 0.15s;
+    }
+    .mode-btn:hover{ border-color:var(--accent); }
+    .mode-btn.active{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:#fff;
+    }
+    .interval-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+      margin-bottom:20px;
+    }
+    .interval-btn{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:15px;
+      font-weight:500;
+      padding:12px 4px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:var(--bg);
+      color:var(--ink-soft);
+      cursor:pointer;
+      transition:all 0.15s;
+    }
+    .interval-btn:hover{ border-color:var(--accent); }
+    .interval-btn.active{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:#fff;
+    }
+    .actions{
+      display:flex;
+      gap:10px;
+    }
+    .btn{
+      flex:1;
+      font-family:'Inter',sans-serif;
+      font-size:16px;
+      font-weight:600;
+      padding:15px 12px;
+      border-radius:12px;
+      border:none;
+      cursor:pointer;
+      transition:opacity 0.15s, transform 0.1s;
+    }
+    .btn:active{ transform:scale(0.98); }
+    .btn-primary{ background:var(--accent); color:#fff; }
+    .btn-primary:disabled{ opacity:0.4; cursor:default; }
+    .interval-btn:disabled,
+    .mode-btn:disabled,
+    .part-btn:disabled{ opacity:0.5; cursor:default; }
+    .interval-btn:disabled:hover,
+    .mode-btn:disabled:hover,
+    .part-btn:disabled:hover{ border-color:var(--line); }
+    .btn-ghost{ background:var(--bg); color:var(--ink); border:1px solid var(--line); }
+    .btn-ghost:disabled{ opacity:0.4; cursor:default; }
+    .btn-danger{ background:var(--alert-soft); color:var(--alert); }
 
-        .meta-row{
-          display:flex;
-          justify-content:space-between;
-          font-family:'IBM Plex Mono',monospace;
-          font-size:14px;
-          color:var(--ink-soft);
-          margin-top:14px;
-          padding-top:14px;
-          border-top:1px solid var(--line);
-        }
+    .meta-row{
+      display:flex;
+      justify-content:space-between;
+      font-family:'IBM Plex Mono',monospace;
+      font-size:14px;
+      color:var(--ink-soft);
+      margin-top:14px;
+      padding-top:14px;
+      border-top:1px solid var(--line);
+    }
 
-        .rec-card{
-          background:var(--surface);
-          border:1px solid var(--line);
-          border-radius:20px;
-          padding:24px 22px;
-          margin-top:20px;
-        }
-        .rec-head{
-          font-family:'Space Grotesk',sans-serif;
-          font-size:17px;
-          font-weight:700;
-          color:var(--ink);
-          margin-bottom:4px;
-        }
-        .rec-sub{
-          font-size:13px;
-          color:var(--ink-soft);
-          line-height:1.5;
-          margin-bottom:16px;
-        }
-        .rec-item{
-          display:block;
-          text-decoration:none;
-          color:inherit;
-          padding:13px 14px;
-          border-radius:12px;
-          background:var(--bg);
-          border:1px solid transparent;
-          margin-bottom:9px;
-          transition:border-color 0.15s, transform 0.1s;
-        }
-        .rec-item:last-of-type{ margin-bottom:0; }
-        .rec-item:hover{ border-color:var(--accent); }
-        .rec-item:active{ transform:scale(0.99); }
-        .rec-name{
-          font-size:15px;
-          font-weight:700;
-          color:var(--accent);
-          margin-bottom:3px;
-        }
-        .rec-name::after{
-          content:" ›";
-          font-weight:700;
-        }
-        .rec-why{
-          font-size:13px;
-          color:var(--ink-soft);
-          line-height:1.55;
-        }
-        .rec-tag{
-          display:inline-block;
-          font-family:'IBM Plex Mono',monospace;
-          font-size:10px;
-          font-weight:600;
-          color:var(--accent);
-          background:var(--accent-soft);
-          padding:2px 7px;
-          border-radius:999px;
-          margin-right:6px;
-          vertical-align:1px;
-        }
+    .rec-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px 22px;
+      margin-top:20px;
+    }
+    .rec-head{
+      font-family:'Space Grotesk',sans-serif;
+      font-size:17px;
+      font-weight:700;
+      color:var(--ink);
+      margin-bottom:4px;
+    }
+    .rec-sub{
+      font-size:13px;
+      color:var(--ink-soft);
+      line-height:1.5;
+      margin-bottom:16px;
+    }
+    .rec-item{
+      display:block;
+      text-decoration:none;
+      color:inherit;
+      padding:13px 14px;
+      border-radius:12px;
+      background:var(--bg);
+      border:1px solid transparent;
+      margin-bottom:9px;
+      transition:border-color 0.15s, transform 0.1s;
+    }
+    .rec-item:last-of-type{ margin-bottom:0; }
+    .rec-item:hover{ border-color:var(--accent); }
+    .rec-item:active{ transform:scale(0.99); }
+    .rec-name{
+      font-size:15px;
+      font-weight:700;
+      color:var(--accent);
+      margin-bottom:3px;
+    }
+    .rec-name::after{
+      content:" ›";
+      font-weight:700;
+    }
+    .rec-why{
+      font-size:13px;
+      color:var(--ink-soft);
+      line-height:1.55;
+    }
+    .rec-tag{
+      display:inline-block;
+      font-family:'IBM Plex Mono',monospace;
+      font-size:10px;
+      font-weight:600;
+      color:var(--accent);
+      background:var(--accent-soft);
+      padding:2px 7px;
+      border-radius:999px;
+      margin-right:6px;
+      vertical-align:1px;
+    }
 
-        .app-footer{
-          text-align:center;
-          margin-top:28px;
-          padding-top:18px;
-          border-top:1px solid var(--line);
-        }
-        .app-footer p{
-          font-family:'IBM Plex Mono',monospace;
-          font-size:11px;
-          color:var(--ink-soft);
-          opacity:0.75;
-          line-height:1.7;
-        }
+    .app-footer{
+      text-align:center;
+      margin-top:28px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+    }
+    .app-footer p{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:11px;
+      color:var(--ink-soft);
+      opacity:0.75;
+      line-height:1.7;
+    }
 
-        .notif-row{
-          display:flex;
-          align-items:center;
-          gap:10px;
-          background:var(--bg);
-          border:1px solid var(--line);
-          border-radius:12px;
-          padding:12px 14px;
-          margin-bottom:18px;
-        }
-        .notif-dot{
-          width:9px;
-          height:9px;
-          border-radius:50%;
-          flex-shrink:0;
-          background:#9aa8a4;
-        }
-        .notif-dot.on{ background:var(--accent); }
-        .notif-dot.off{ background:var(--alert); }
-        .notif-text{
-          flex:1;
-          min-width:0;
-          font-size:13px;
-          color:var(--ink-soft);
-          line-height:1.4;
-        }
-        .notif-text b{ color:var(--ink); }
-        .notif-btn{
-          flex-shrink:0;
-          font-family:'Inter',sans-serif;
-          font-size:13px;
-          font-weight:600;
-          padding:9px 13px;
-          border-radius:9px;
-          border:1px solid var(--accent);
-          background:var(--accent);
-          color:#fff;
-          cursor:pointer;
-          transition:opacity 0.15s;
-        }
-        .notif-btn:hover{ opacity:0.9; }
-        .notif-btn:disabled{ opacity:0.4; cursor:default; }
+    .notif-row{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      background:var(--bg);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:12px 14px;
+      margin-bottom:18px;
+    }
+    .notif-dot{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      flex-shrink:0;
+      background:#9aa8a4;
+    }
+    .notif-dot.on{ background:var(--accent); }
+    .notif-dot.off{ background:var(--alert); }
+    .notif-text{
+      flex:1;
+      min-width:0;
+      font-size:13px;
+      color:var(--ink-soft);
+      line-height:1.4;
+    }
+    .notif-text b{ color:var(--ink); }
+    .notif-btn{
+      flex-shrink:0;
+      font-family:'Inter',sans-serif;
+      font-size:13px;
+      font-weight:600;
+      padding:9px 13px;
+      border-radius:9px;
+      border:1px solid var(--accent);
+      background:var(--accent);
+      color:#fff;
+      cursor:pointer;
+      transition:opacity 0.15s;
+    }
+    .notif-btn:hover{ opacity:0.9; }
+    .notif-btn:disabled{ opacity:0.4; cursor:default; }
 
-        .streak-note{
-          font-family:'Inter',sans-serif;
-          font-size:13px;
-          font-weight:600;
-          color:var(--accent);
-          background:var(--accent-soft);
-          border-radius:10px;
-          padding:10px 12px;
-          text-align:center;
-          margin-top:12px;
-        }
-        .streak-note:empty{ display:none; }
+    .streak-note{
+      font-family:'Inter',sans-serif;
+      font-size:13px;
+      font-weight:600;
+      color:var(--accent);
+      background:var(--accent-soft);
+      border-radius:10px;
+      padding:10px 12px;
+      text-align:center;
+      margin-top:12px;
+    }
+    .streak-note:empty{ display:none; }
 
-        .voice-note{
-          font-size:14px;
-          color:var(--ink-soft);
-          line-height:1.6;
-          padding:14px 16px;
-          background:var(--accent-soft);
-          border-radius:12px;
-        }
-        .voice-note b{ color:var(--ink); }
+    .voice-note{
+      font-size:14px;
+      color:var(--ink-soft);
+      line-height:1.6;
+      padding:14px 16px;
+      background:var(--accent-soft);
+      border-radius:12px;
+    }
+    .voice-note b{ color:var(--ink); }
 
-        .info-accordion{
-          background:var(--accent-soft);
-          border-radius:14px;
-          overflow:hidden;
-          margin-bottom:20px;
-        }
-        .info-toggle{
-          width:100%;
-          display:flex;
-          align-items:center;
-          justify-content:space-between;
-          gap:10px;
-          padding:14px 16px;
-          background:none;
-          border:none;
-          cursor:pointer;
-          font-family:'Inter',sans-serif;
-          font-size:14px;
-          font-weight:600;
-          color:var(--ink);
-          text-align:left;
-        }
-        .info-toggle-icon{
-          flex-shrink:0;
-          width:18px;
-          height:18px;
-          color:var(--accent);
-          transition:transform 0.2s;
-        }
-        .info-accordion.open .info-toggle-icon{ transform:rotate(180deg); }
-        .info-panel{
-          max-height:0;
-          overflow:hidden;
-          transition:max-height 0.25s ease;
-        }
-        .info-accordion.open .info-panel{ max-height:900px; }
-        .info-panel-inner{
-          padding:0 16px 16px;
-        }
-        .info-item{
-          font-size:13px;
-          color:var(--ink-soft);
-          line-height:1.6;
-          padding-top:12px;
-          border-top:1px solid rgba(0,0,0,0.06);
-          margin-top:12px;
-        }
-        .info-item:first-child{
-          padding-top:0;
-          border-top:none;
-          margin-top:0;
-        }
-        .info-item b{ color:var(--ink); }
+    .info-accordion{
+      background:var(--accent-soft);
+      border-radius:14px;
+      overflow:hidden;
+      margin-bottom:20px;
+    }
+    .info-toggle{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:14px 16px;
+      background:none;
+      border:none;
+      cursor:pointer;
+      font-family:'Inter',sans-serif;
+      font-size:14px;
+      font-weight:600;
+      color:var(--ink);
+      text-align:left;
+    }
+    .info-toggle-icon{
+      flex-shrink:0;
+      width:18px;
+      height:18px;
+      color:var(--accent);
+      transition:transform 0.2s;
+    }
+    .info-accordion.open .info-toggle-icon{ transform:rotate(180deg); }
+    .info-panel{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.25s ease;
+    }
+    .info-accordion.open .info-panel{ max-height:900px; }
+    .info-panel-inner{
+      padding:0 16px 16px;
+    }
+    .info-item{
+      font-size:13px;
+      color:var(--ink-soft);
+      line-height:1.6;
+      padding-top:12px;
+      border-top:1px solid rgba(0,0,0,0.06);
+      margin-top:12px;
+    }
+    .info-item:first-child{
+      padding-top:0;
+      border-top:none;
+      margin-top:0;
+    }
+    .info-item b{ color:var(--ink); }
 
-        .howto-steps{
-          counter-reset: howto;
-          padding-top:12px;
-          border-top:1px solid rgba(0,0,0,0.06);
-          margin-top:12px;
-        }
-        .howto-step{
-          display:flex;
-          gap:12px;
-          margin-bottom:14px;
-        }
-        .howto-step:last-child{ margin-bottom:0; }
-        .howto-num{
-          counter-increment: howto;
-          flex-shrink:0;
-          width:26px;
-          height:26px;
-          border-radius:50%;
-          background:var(--accent);
-          color:#fff;
-          font-family:'Space Grotesk',sans-serif;
-          font-size:13px;
-          font-weight:700;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
-        .howto-num::before{ content: counter(howto); }
-        .howto-text{ flex:1; padding-top:2px; }
-        .howto-text b{
-          display:block;
-          font-size:13px;
-          color:var(--ink);
-          margin-bottom:2px;
-        }
-        .howto-text span{
-          font-size:13px;
-          color:var(--ink-soft);
-          line-height:1.5;
-        }
+    .howto-steps{
+      counter-reset: howto;
+      padding-top:12px;
+      border-top:1px solid rgba(0,0,0,0.06);
+      margin-top:12px;
+    }
+    .howto-step{
+      display:flex;
+      gap:12px;
+      margin-bottom:14px;
+    }
+    .howto-step:last-child{ margin-bottom:0; }
+    .howto-num{
+      counter-increment: howto;
+      flex-shrink:0;
+      width:26px;
+      height:26px;
+      border-radius:50%;
+      background:var(--accent);
+      color:#fff;
+      font-family:'Space Grotesk',sans-serif;
+      font-size:13px;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .howto-num::before{ content: counter(howto); }
+    .howto-text{ flex:1; padding-top:2px; }
+    .howto-text b{
+      display:block;
+      font-size:13px;
+      color:var(--ink);
+      margin-bottom:2px;
+    }
+    .howto-text span{
+      font-size:13px;
+      color:var(--ink-soft);
+      line-height:1.5;
+    }
 
-        .ad-slot{
-          width:380px;
-          max-width:100%;
-          min-height:100px;
-          margin:0 auto 20px;
-          border-radius:14px;
-          overflow:hidden;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
-        .ad-slot-label{
-          font-family:'IBM Plex Mono',monospace;
-          font-size:12px;
-          color:var(--ink-soft);
-          text-align:center;
-          line-height:1.6;
-        }
-        .ad-disclosure{
-          font-size:11px;
-          color:var(--ink-soft);
-          opacity:0.7;
-          text-align:center;
-          margin:-12px 0 20px;
-        }
-        .voice-row{
-          display:flex;
-          gap:8px;
-          margin-bottom:18px;
-        }
-        .voice-select{
-          flex:1;
-          min-width:0;
-          font-family:'Inter',sans-serif;
-          font-size:14px;
-          font-weight:500;
-          padding:12px 10px;
-          border-radius:10px;
-          border:1px solid var(--line);
-          background:var(--bg);
-          color:var(--ink);
-          cursor:pointer;
-        }
-        .voice-select:disabled{ opacity:0.5; cursor:default; }
-        .voice-test-btn{
-          flex-shrink:0;
-          font-family:'Inter',sans-serif;
-          font-size:14px;
-          font-weight:600;
-          padding:12px 16px;
-          border-radius:10px;
-          border:1px solid var(--line);
-          background:var(--bg);
-          color:var(--ink-soft);
-          cursor:pointer;
-          transition:all 0.15s;
-        }
-        .voice-test-btn:hover{ border-color:var(--accent); color:var(--accent); }
+    .ad-slot{
+      width:380px;
+      max-width:100%;
+      min-height:100px;
+      margin:0 auto 20px;
+      border-radius:14px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .ad-slot-label{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:12px;
+      color:var(--ink-soft);
+      text-align:center;
+      line-height:1.6;
+    }
+    .ad-disclosure{
+      font-size:11px;
+      color:var(--ink-soft);
+      opacity:0.7;
+      text-align:center;
+      margin:-12px 0 20px;
+    }
+    .voice-row{
+      display:flex;
+      gap:8px;
+      margin-bottom:18px;
+    }
+    .voice-select{
+      flex:1;
+      min-width:0;
+      font-family:'Inter',sans-serif;
+      font-size:14px;
+      font-weight:500;
+      padding:12px 10px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:var(--bg);
+      color:var(--ink);
+      cursor:pointer;
+    }
+    .voice-select:disabled{ opacity:0.5; cursor:default; }
+    .voice-test-btn{
+      flex-shrink:0;
+      font-family:'Inter',sans-serif;
+      font-size:14px;
+      font-weight:600;
+      padding:12px 16px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:var(--bg);
+      color:var(--ink-soft);
+      cursor:pointer;
+      transition:all 0.15s;
+    }
+    .voice-test-btn:hover{ border-color:var(--accent); color:var(--accent); }
 
-        .share-section{
-          margin-bottom:4px;
-        }
-        .share-section-title{
-          font-family:'Space Grotesk',sans-serif;
-          font-size:13px;
-          font-weight:700;
-          color:var(--ink-soft);
-          margin-bottom:10px;
-        }
-        .share-row{
-          display:flex;
-          gap:8px;
-          margin-bottom:20px;
-        }
-        .share-btn{
-          flex:1;
-          font-family:'Inter',sans-serif;
-          font-size:15px;
-          font-weight:600;
-          padding:14px 12px;
-          border-radius:12px;
-          border:1px solid var(--line);
-          background:var(--surface);
-          color:var(--ink);
-          cursor:pointer;
-          transition:all 0.15s;
-        }
-        .share-btn:hover{ border-color:var(--accent); color:var(--accent); }
-        .share-btn:active{ transform:scale(0.98); }
-        .share-btn:disabled{ opacity:0.5; cursor:default; }
-        .share-btn:disabled:hover{ border-color:var(--line); color:var(--ink); }
+    .share-section{
+      margin-bottom:4px;
+    }
+    .share-section-title{
+      font-family:'Space Grotesk',sans-serif;
+      font-size:13px;
+      font-weight:700;
+      color:var(--ink-soft);
+      margin-bottom:10px;
+    }
+    .share-row{
+      display:flex;
+      gap:8px;
+      margin-bottom:20px;
+    }
+    .share-btn{
+      flex:1;
+      font-family:'Inter',sans-serif;
+      font-size:15px;
+      font-weight:600;
+      padding:14px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:var(--surface);
+      color:var(--ink);
+      cursor:pointer;
+      transition:all 0.15s;
+    }
+    .share-btn:hover{ border-color:var(--accent); color:var(--accent); }
+    .share-btn:active{ transform:scale(0.98); }
+    .share-btn:disabled{ opacity:0.5; cursor:default; }
+    .share-btn:disabled:hover{ border-color:var(--line); color:var(--ink); }
 
-        /* 지금 바로 자세교정하기 — 크고 눈에 띄는 CTA 버튼 */
-        .cta-btn{
-          width:100%;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-          gap:10px;
-          font-family:'Space Grotesk',sans-serif;
-          font-size:19px;
-          font-weight:800;
-          letter-spacing:-0.01em;
-          padding:22px 16px;
-          border-radius:16px;
-          border:none;
-          background:linear-gradient(135deg, #2F6F62, #1F4F45);
-          color:#fff;
-          cursor:pointer;
-          margin-bottom:18px;
-          box-shadow:0 8px 22px rgba(47,111,98,0.4);
-          transition:transform 0.12s, box-shadow 0.2s;
-          animation: cta-pulse 2.6s ease-in-out infinite;
-        }
-        .cta-btn:hover{ box-shadow:0 10px 28px rgba(245,166,35,0.5); }
-        .cta-btn:active{ transform:scale(0.97); }
-        .cta-btn:disabled{
-          opacity:0.5;
-          cursor:default;
-          animation:none;
-          box-shadow:none;
-          background:var(--ink-soft);
-        }
-        .cta-icon{
-          font-size:23px;
-          line-height:1;
-        }
-        @keyframes cta-pulse{
-          0%, 100% { box-shadow:0 8px 22px rgba(47,111,98,0.4); }
-          50%      { box-shadow:0 8px 30px rgba(245,166,35,0.55); }
-        }
+    /* 지금 바로 자세교정하기 — 크고 눈에 띄는 CTA 버튼 */
+    .cta-btn{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      font-family:'Space Grotesk',sans-serif;
+      font-size:19px;
+      font-weight:800;
+      letter-spacing:-0.01em;
+      padding:22px 16px;
+      border-radius:16px;
+      border:none;
+      background:linear-gradient(135deg, #2F6F62, #1F4F45);
+      color:#fff;
+      cursor:pointer;
+      margin-bottom:18px;
+      box-shadow:0 8px 22px rgba(47,111,98,0.4);
+      transition:transform 0.12s, box-shadow 0.2s;
+      animation: cta-pulse 2.6s ease-in-out infinite;
+    }
+    .cta-btn:hover{ box-shadow:0 10px 28px rgba(245,166,35,0.5); }
+    .cta-btn:active{ transform:scale(0.97); }
+    .cta-btn:disabled{
+      opacity:0.5;
+      cursor:default;
+      animation:none;
+      box-shadow:none;
+      background:var(--ink-soft);
+    }
+    .cta-icon{
+      font-size:23px;
+      line-height:1;
+    }
+    @keyframes cta-pulse{
+      0%, 100% { box-shadow:0 8px 22px rgba(47,111,98,0.4); }
+      50%      { box-shadow:0 8px 30px rgba(245,166,35,0.55); }
+    }
 
-        .qr-card{
-          background:var(--surface);
-          border:1px solid var(--line);
-          border-radius:20px;
-          padding:20px;
-          margin-bottom:20px;
-          display:flex;
-          align-items:center;
-          gap:16px;
-          text-decoration:none;
-        }
-        .qr-card img{
-          width:88px;
-          height:88px;
-          flex-shrink:0;
-          border-radius:10px;
-          border:1px solid var(--line);
-        }
-        .qr-card-text{ flex:1; min-width:0; }
-        .qr-card-title{
-          font-family:'Space Grotesk',sans-serif;
-          font-size:15px;
-          font-weight:700;
-          color:var(--ink);
-          margin-bottom:4px;
-        }
-        .qr-card-sub{
-          font-size:12px;
-          color:var(--ink-soft);
-          line-height:1.5;
-        }
+    .qr-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:20px;
+      margin-bottom:20px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      text-decoration:none;
+    }
+    .qr-card img{
+      width:88px;
+      height:88px;
+      flex-shrink:0;
+      border-radius:10px;
+      border:1px solid var(--line);
+    }
+    .qr-card-text{ flex:1; min-width:0; }
+    .qr-card-title{
+      font-family:'Space Grotesk',sans-serif;
+      font-size:15px;
+      font-weight:700;
+      color:var(--ink);
+      margin-bottom:4px;
+    }
+    .qr-card-sub{
+      font-size:12px;
+      color:var(--ink-soft);
+      line-height:1.5;
+    }
 
-        .share-toast{
-          position:fixed;
-          left:50%;
-          bottom:32px;
-          transform:translateX(-50%) translateY(20px);
-          background:var(--ink);
-          color:#fff;
-          font-size:14px;
-          font-weight:500;
-          padding:12px 20px;
-          border-radius:999px;
-          opacity:0;
-          pointer-events:none;
-          transition:opacity 0.25s, transform 0.25s;
-          z-index:60;
-        }
-        .share-toast.show{
-          opacity:1;
-          transform:translateX(-50%) translateY(0);
-        }
+    .share-toast{
+      position:fixed;
+      left:50%;
+      bottom:32px;
+      transform:translateX(-50%) translateY(20px);
+      background:var(--ink);
+      color:#fff;
+      font-size:14px;
+      font-weight:500;
+      padding:12px 20px;
+      border-radius:999px;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity 0.25s, transform 0.25s;
+      z-index:60;
+    }
+    .share-toast.show{
+      opacity:1;
+      transform:translateX(-50%) translateY(0);
+    }
 
-        /* Alert overlay */
-        .overlay{
-          position:fixed;
-          inset:0;
-          background:rgba(28,43,42,0.92);
-          display:none;
-          align-items:center;
-          justify-content:center;
-          padding:24px;
-          z-index:50;
-        }
-        .overlay.show{ display:flex; }
-        .overlay-card{
-          background:var(--surface);
-          border-radius:24px;
-          padding:36px 28px;
-          max-width:400px;
-          width:100%;
-          text-align:center;
-        }
-        .overlay-eyebrow{
-          font-family:'IBM Plex Mono',monospace;
-          font-size:12px;
-          letter-spacing:0.12em;
-          color:var(--alert);
-          text-transform:uppercase;
-          margin-bottom:10px;
-        }
-        .overlay-title{
-          font-family:'Space Grotesk',sans-serif;
-          font-size:28px;
-          font-weight:700;
-          margin-bottom:14px;
-        }
-        .overlay-text{
-          font-size:18px;
-          line-height:1.6;
-          color:var(--ink-soft);
-          margin-bottom:24px;
-        }
+    /* Alert overlay */
+    .overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(28,43,42,0.92);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      z-index:50;
+    }
+    .overlay.show{ display:flex; }
+    .overlay-card{
+      background:var(--surface);
+      border-radius:24px;
+      padding:36px 28px;
+      max-width:400px;
+      width:100%;
+      text-align:center;
+    }
+    .overlay-eyebrow{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:12px;
+      letter-spacing:0.12em;
+      color:var(--alert);
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    .overlay-title{
+      font-family:'Space Grotesk',sans-serif;
+      font-size:28px;
+      font-weight:700;
+      margin-bottom:14px;
+    }
+    .overlay-text{
+      font-size:18px;
+      line-height:1.6;
+      color:var(--ink-soft);
+      margin-bottom:24px;
+    }
 
-        /* 음성 자막 */
-        .caption-box{
-          background:var(--accent-soft);
-          border-radius:16px;
-          padding:22px 18px;
-          margin-bottom:22px;
-          min-height:96px;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
-        .caption-current{
-          font-family:'Space Grotesk','Inter',sans-serif;
-          font-size:30px;
-          font-weight:700;
-          color:var(--accent);
-          line-height:1.35;
-          text-align:center;
-          transition:opacity 0.15s;
-        }
-        .caption-current.fade{ opacity:0.25; }
-        .caption-progress{
-          display:flex;
-          gap:5px;
-          justify-content:center;
-          flex-wrap:wrap;
-          margin-bottom:20px;
-        }
-        .caption-dot{
-          width:7px;
-          height:7px;
-          border-radius:50%;
-          background:var(--line);
-          transition:background 0.2s, transform 0.2s;
-        }
-        .caption-dot.done{ background:var(--accent); opacity:0.45; }
-        .caption-dot.active{ background:var(--accent); transform:scale(1.5); }
+    /* 음성 자막 */
+    .caption-box{
+      background:var(--accent-soft);
+      border-radius:16px;
+      padding:22px 18px;
+      margin-bottom:22px;
+      min-height:96px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .caption-current{
+      font-family:'Space Grotesk','Inter',sans-serif;
+      font-size:30px;
+      font-weight:700;
+      color:var(--accent);
+      line-height:1.35;
+      text-align:center;
+      transition:opacity 0.15s;
+    }
+    .caption-current.fade{ opacity:0.25; }
+    .caption-progress{
+      display:flex;
+      gap:5px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-bottom:20px;
+    }
+    .caption-dot{
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--line);
+      transition:background 0.2s, transform 0.2s;
+    }
+    .caption-dot.done{ background:var(--accent); opacity:0.45; }
+    .caption-dot.active{ background:var(--accent); transform:scale(1.5); }
 
-        .overlay-actions{ display:flex; gap:10px; flex-wrap:wrap; }
-        .overlay-actions .btn{ min-width:88px; }
-    </style>
+    .overlay-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+    .overlay-actions .btn{ min-width:88px; }
+  </style>
 </head>
 <body>
 
 <style>
-    .jss-header {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 16px;
-      padding: 0 0 6px;
-      margin-bottom: 14px;
-    }
-    .jss-logo {
-      width: 86px;
-      height: 86px;
-      flex-shrink: 0;
-      border-radius: 18px;
-      box-shadow: 0 2px 6px rgba(46, 107, 91, 0.25);
-    }
-    .jss-title-wrap {
-      text-align: left;
-      flex: 1;
-    }
-    .jss-title {
-      margin: 0;
-      font-size: 36px;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-      color: #2E6B5B;
-      line-height: 1.1;
-    }
-    .jss-subtitle {
-      margin: 5px 0 0;
-      font-size: 15px;
-      font-weight: 500;
-      color: #6E7F79;
-    }
-    .jss-brand {
-      margin: 5px 0 0;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      color: #2E6B5B;
-      opacity: 0.75;
-    }
-    @media (min-width: 600px) {
-      .jss-logo { width: 80px; height: 80px; }
-      .jss-title { font-size: 42px; }
-      .jss-subtitle { font-size: 17px; }
-      .jss-brand { font-size: 13px; }
-    }
+  .jss-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 0 0 6px;
+    margin-bottom: 14px;
+  }
+  .jss-logo {
+    width: 86px;
+    height: 86px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    box-shadow: 0 2px 6px rgba(46, 107, 91, 0.25);
+  }
+  .jss-title-wrap {
+    text-align: left;
+    flex: 1;
+  }
+  .jss-title {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #2E6B5B;
+    line-height: 1.1;
+  }
+  .jss-subtitle {
+    margin: 5px 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #6E7F79;
+  }
+  .jss-brand {
+    margin: 5px 0 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #2E6B5B;
+    opacity: 0.75;
+  }
+  @media (min-width: 600px) {
+    .jss-logo { width: 80px; height: 80px; }
+    .jss-title { font-size: 42px; }
+    .jss-subtitle { font-size: 17px; }
+    .jss-brand { font-size: 13px; }
+  }
 </style>
 
 <div class="app">
-    <!-- 자세쌤 헤더 (인라인 SVG 로고 — 치료사 캐릭터 디자인) -->
-    <header class="jss-header">
-        <svg class="jss-logo" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="1024" height="1024" rx="224" fill="#2E6B5B"/>
-            <g transform="translate(82,44) scale(0.84)">
-                <path d="M 512 902 m -246 0 a 246 262 0 0 1 492 0 z" fill="#F7F6F2"/>
-                <rect x="470" y="600" width="84" height="90" rx="42" fill="#F7F6F2"/>
-                <path d="M 424 668 L 512 796 L 600 668 L 600 902 L 424 902 Z" fill="#2E6B5B"/>
-                <rect x="614" y="792" width="82" height="60" rx="12" fill="#F5A623"/>
-                <rect x="631" y="811" width="48" height="10" rx="5" fill="#2E6B5B"/>
-                <rect x="631" y="830" width="32" height="10" rx="5" fill="#2E6B5B"/>
-                <circle cx="512" cy="436" r="218" fill="#F7F6F2"/>
-                <circle cx="440" cy="412" r="31" fill="#2E6B5B"/>
-                <circle cx="584" cy="412" r="31" fill="#2E6B5B"/>
-                <path d="M 434 500 q 78 66 156 0" fill="none" stroke="#2E6B5B" stroke-width="29" stroke-linecap="round"/>
-                <circle cx="826" cy="238" r="96" fill="#F5A623"/>
-                <rect x="808" y="180" width="36" height="72" rx="18" fill="#2E6B5B"/>
-                <circle cx="826" cy="284" r="21" fill="#2E6B5B"/>
-            </g>
-        </svg>
-        <div class="jss-title-wrap">
-            <h1 class="jss-title">자세쌤</h1>
-            <p class="jss-subtitle">자세는 의지가 아니라 알림으로 고칩니다</p>
-            <p class="jss-brand">12년차 물리치료사 제작 · 순환자세연구소</p>
-        </div>
-    </header>
+  <!-- 자세쌤 헤더 (인라인 SVG 로고 — 치료사 캐릭터 디자인) -->
+  <header class="jss-header">
+    <svg class="jss-logo" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="1024" height="1024" rx="224" fill="#2E6B5B"/>
+      <g transform="translate(82,44) scale(0.84)">
+        <path d="M 512 902 m -246 0 a 246 262 0 0 1 492 0 z" fill="#F7F6F2"/>
+        <rect x="470" y="600" width="84" height="90" rx="42" fill="#F7F6F2"/>
+        <path d="M 424 668 L 512 796 L 600 668 L 600 902 L 424 902 Z" fill="#2E6B5B"/>
+        <rect x="614" y="792" width="82" height="60" rx="12" fill="#F5A623"/>
+        <rect x="631" y="811" width="48" height="10" rx="5" fill="#2E6B5B"/>
+        <rect x="631" y="830" width="32" height="10" rx="5" fill="#2E6B5B"/>
+        <circle cx="512" cy="436" r="218" fill="#F7F6F2"/>
+        <circle cx="440" cy="412" r="31" fill="#2E6B5B"/>
+        <circle cx="584" cy="412" r="31" fill="#2E6B5B"/>
+        <path d="M 434 500 q 78 66 156 0" fill="none" stroke="#2E6B5B" stroke-width="29" stroke-linecap="round"/>
+        <circle cx="826" cy="238" r="96" fill="#F5A623"/>
+        <rect x="808" y="180" width="36" height="72" rx="18" fill="#2E6B5B"/>
+        <circle cx="826" cy="284" r="21" fill="#2E6B5B"/>
+      </g>
+    </svg>
+    <div class="jss-title-wrap">
+      <h1 class="jss-title">자세쌤</h1>
+      <p class="jss-subtitle">자세는 의지가 아니라 알림으로 고칩니다</p>
+      <p class="jss-brand">12년차 물리치료사 제작 · 순환자세연구소</p>
+    </div>
+  </header>
 
-    <p class="sub">정해진 간격마다 음성으로 안내해요.</p>
+  <p class="sub">정해진 간격마다 음성으로 안내해요.</p>
 
-    <div class="align-wrap">
-        <div class="status-word aligned" id="statusWord">정렬 대기</div>
-        <div class="countdown idle" id="countdown">간격을 선택하고 시작하세요</div>
+  <div class="align-wrap">
+    <div class="status-word aligned" id="statusWord">정렬 대기</div>
+    <div class="countdown idle" id="countdown">간격을 선택하고 시작하세요</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">부위 선택</div>
+    <div class="part-grid" id="partGrid">
+      <button class="part-btn" data-part="목">목</button>
+      <button class="part-btn" data-part="어깨">어깨</button>
+      <button class="part-btn" data-part="등">등</button>
+      <button class="part-btn" data-part="허리">허리</button>
+      <button class="part-btn" data-part="골반">골반</button>
+      <button class="part-btn" data-part="다리">다리</button>
+      <button class="part-btn" data-part="무릎">무릎</button>
+      <button class="part-btn" data-part="발목">발목</button>
+      <button class="part-btn active" data-part="전신">전신</button>
+    </div>
+    <div class="part-hint">부위는 하나만 선택할 수 있어요</div>
+
+    <div id="subWrap" style="display:none;">
+      <div class="card-title">세부 증상</div>
+      <div class="sub-grid" id="subGrid"></div>
     </div>
 
-    <div class="card">
-        <div class="card-title">부위 선택</div>
-        <div class="part-grid" id="partGrid">
-            <button class="part-btn" data-part="목">목</button>
-            <button class="part-btn" data-part="허리">허리</button>
-            <button class="part-btn" data-part="등">등</button>
-            <button class="part-btn" data-part="어깨">어깨</button>
-            <button class="part-btn" data-part="골반">골반</button>
-            <button class="part-btn" data-part="무릎">무릎</button>
-            <button class="part-btn" data-part="발목">발목</button>
-            <button class="part-btn active" data-part="전신">전신</button>
-        </div>
-        <div class="part-hint">부위는 하나만 선택할 수 있어요</div>
-
-        <div class="card-title">자세 모드</div>
-        <div class="mode-grid" id="modeGrid">
-            <button class="mode-btn active" data-mode="sitting">앉은자세</button>
-            <button class="mode-btn" data-mode="lying">누운자세</button>
-        </div>
-        <div class="card-title">알림 간격</div>
-        <div class="interval-grid" id="intervalGrid">
-            <button class="interval-btn" data-min="20">20분</button>
-            <button class="interval-btn active" data-min="40">40분</button>
-            <button class="interval-btn" data-min="60">60분</button>
-        </div>
-        <div class="mode-grid" id="soundGrid">
-            <button class="mode-btn active" data-sound="on">알림음 켜기</button>
-            <button class="mode-btn" data-sound="off">알림음 끄기</button>
-        </div>
-        <div class="card-title">팝업 알림</div>
-        <div class="notif-row">
-            <span class="notif-dot" id="notifDot"></span>
-            <span class="notif-text" id="notifText">이 브라우저의 알림 권한을 확인하는 중…</span>
-            <button class="notif-btn" id="notifBtn" style="display:none;">알림 켜기</button>
-        </div>
-        <button class="cta-btn" id="fullTestBtn">
-            <span class="cta-icon">⚡</span>
-            <span>지금 바로 자세교정하기</span>
-        </button>
-        <div class="actions">
-            <button class="btn btn-primary" id="startBtn">시작</button>
-            <button class="btn btn-ghost" id="pauseBtn" disabled>일시정지</button>
-            <button class="btn btn-ghost" id="stopBtn" disabled>정지</button>
-        </div>
-        <div class="meta-row">
-            <span>오늘</span>
-            <span id="countToday">0회</span>
-        </div>
-        <div class="meta-row" style="margin-top:0; padding-top:10px;">
-            <span>이번 주</span>
-            <span id="countWeek">0회</span>
-        </div>
-        <div class="meta-row" style="margin-top:0; padding-top:10px;">
-            <span>전체 누적</span>
-            <span id="countTotal">0회</span>
-        </div>
-        <div class="streak-note" id="streakNote"></div>
+    <div class="card-title">자세 모드</div>
+    <div class="mode-grid" id="modeGrid">
+      <button class="mode-btn active" data-mode="sitting">앉은자세</button>
+      <button class="mode-btn" data-mode="lying">누운자세</button>
     </div>
-
-    <!-- 쿠팡파트너스 배너 (380x100, 가로형) — 통계 확인 직후: 자기 자신을 돌아본 순간이라
-         관련 상품 제안에 가장 열려 있는 타이밍이라 이 위치에 배치 -->
-    <div class="ad-slot" id="adSlot300x250">
-        <iframe src="https://ads-partners.coupang.com/widgets.html?id=1020112&template=carousel&trackingCode=AF5742623&subId=&width=380&height=100&tsource=" width="380" height="100" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+    <div class="card-title">알림 간격</div>
+    <div class="interval-grid" id="intervalGrid">
+      <button class="interval-btn" data-min="20">20분</button>
+      <button class="interval-btn active" data-min="40">40분</button>
+      <button class="interval-btn" data-min="60">60분</button>
     </div>
-    <div class="ad-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+    <div class="mode-grid" id="soundGrid">
+      <button class="mode-btn active" data-sound="on">알림음 켜기</button>
+      <button class="mode-btn" data-sound="off">알림음 끄기</button>
+    </div>
+    <div class="card-title">팝업 알림</div>
+    <div class="notif-row">
+      <span class="notif-dot" id="notifDot"></span>
+      <span class="notif-text" id="notifText">이 브라우저의 알림 권한을 확인하는 중…</span>
+      <button class="notif-btn" id="notifBtn" style="display:none;">알림 켜기</button>
+    </div>
+    <button class="cta-btn" id="fullTestBtn">
+      <span class="cta-icon">⚡</span>
+      <span>지금 바로 자세교정하기</span>
+    </button>
+    <div class="actions">
+      <button class="btn btn-primary" id="startBtn">시작</button>
+      <button class="btn btn-ghost" id="pauseBtn" disabled>일시정지</button>
+      <button class="btn btn-ghost" id="stopBtn" disabled>정지</button>
+    </div>
+    <div class="meta-row">
+      <span>오늘</span>
+      <span id="countToday">0회</span>
+    </div>
+    <div class="meta-row" style="margin-top:0; padding-top:10px;">
+      <span>이번 주</span>
+      <span id="countWeek">0회</span>
+    </div>
+    <div class="meta-row" style="margin-top:0; padding-top:10px;">
+      <span>전체 누적</span>
+      <span id="countTotal">0회</span>
+    </div>
+    <div class="streak-note" id="streakNote"></div>
+  </div>
 
-    <div class="share-section">
-        <div class="share-section-title">💻 웹앱 공유</div>
-        <div class="share-row">
-            <button class="share-btn" id="shareWebBtn">웹으로 공유</button>
-            <button class="share-btn" id="copyWebBtn">웹 링크 복사</button>
+  <!-- 쿠팡파트너스 배너 (380x100, 가로형) — 통계 확인 직후: 자기 자신을 돌아본 순간이라
+       관련 상품 제안에 가장 열려 있는 타이밍이라 이 위치에 배치 -->
+  <div class="ad-slot" id="adSlot300x250">
+    <iframe src="https://ads-partners.coupang.com/widgets.html?id=1020112&template=carousel&trackingCode=AF5742623&subId=&width=380&height=100&tsource=" width="380" height="100" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+  </div>
+  <div class="ad-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+
+  <div class="share-section">
+    <div class="share-section-title">💻 웹앱 공유</div>
+    <div class="share-row">
+      <button class="share-btn" id="shareWebBtn">웹으로 공유</button>
+      <button class="share-btn" id="copyWebBtn">웹 링크 복사</button>
+    </div>
+    <a class="qr-card" href="https://q.me-qr.com/r1mntkb1" target="_blank" rel="noopener">
+      <img src="qr-code.png" alt="자세쌤 QR 코드" width="88" height="88">
+      <div class="qr-card-text">
+        <div class="qr-card-title">QR로 바로 열기</div>
+        <div class="qr-card-sub">카메라로 스캔하면 이 페이지가 바로 열립니다.</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="share-section">
+    <div class="share-section-title">📱 자세쌤 앱 공유</div>
+    <div class="share-row" style="margin-bottom:20px;">
+      <button class="share-btn" id="shareAppBtn">앱으로 공유</button>
+      <button class="share-btn" id="copyAppBtn">앱 링크 복사</button>
+    </div>
+  </div>
+
+  <!-- 이용 안내 아코디언 (기본 접힘) -->
+  <div class="info-accordion" id="infoAccordion">
+    <button class="info-toggle" id="infoToggle" type="button" aria-expanded="false">
+      <span>이용 안내 · 문의</span>
+      <svg class="info-toggle-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="info-panel" id="infoPanel">
+      <div class="info-panel-inner">
+        <div class="info-item">
+          <b>안내</b> — 이 탭을 열어둔 상태에서만 타이머가 동작합니다. 처음 시작할 때 브라우저가 알림·음성 권한을 물으면 허용해 주세요.
         </div>
-        <a class="qr-card" href="https://q.me-qr.com/r1mntkb1" target="_blank" rel="noopener">
-            <img src="qr-code.png" alt="자세쌤 QR 코드" width="88" height="88">
-            <div class="qr-card-text">
-                <div class="qr-card-title">QR로 바로 열기</div>
-                <div class="qr-card-sub">카메라로 스캔하면 이 페이지가 바로 열립니다.</div>
+        <div class="info-item">
+          <b>사용법</b>
+          <div class="howto-steps">
+            <div class="howto-step">
+              <span class="howto-num"></span>
+              <div class="howto-text"><b>부위 선택</b><span>지금 제일 신경 쓰이는 곳 하나를 고르세요</span></div>
             </div>
-        </a>
-    </div>
-
-    <div class="share-section">
-        <div class="share-section-title">📱 자세쌤 앱 공유</div>
-        <div class="share-row" style="margin-bottom:20px;">
-            <button class="share-btn" id="shareAppBtn">앱으로 공유</button>
-            <button class="share-btn" id="copyAppBtn">앱 링크 복사</button>
-        </div>
-    </div>
-
-    <!-- 이용 안내 아코디언 (기본 접힘) -->
-    <div class="info-accordion" id="infoAccordion">
-        <button class="info-toggle" id="infoToggle" type="button" aria-expanded="false">
-            <span>이용 안내 · 문의</span>
-            <svg class="info-toggle-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-        <div class="info-panel" id="infoPanel">
-            <div class="info-panel-inner">
-                <div class="info-item">
-                    <b>안내</b> — 이 탭을 열어둔 상태에서만 타이머가 동작합니다. 처음 시작할 때 브라우저가 알림·음성 권한을 물으면 허용해 주세요.
-                </div>
-                <div class="info-item">
-                    <b>사용법</b>
-                    <div class="howto-steps">
-                        <div class="howto-step">
-                            <span class="howto-num"></span>
-                            <div class="howto-text"><b>부위 선택</b><span>지금 제일 신경 쓰이는 곳 하나를 고르세요</span></div>
-                        </div>
-                        <div class="howto-step">
-                            <span class="howto-num"></span>
-                            <div class="howto-text"><b>자세 모드 선택</b><span>사무실이면 앉은자세, 자기 전이면 누운자세로</span></div>
-                        </div>
-                        <div class="howto-step">
-                            <span class="howto-num"></span>
-                            <div class="howto-text"><b>알림 간격 선택</b><span>20 · 40 · 60분 중 선택 (처음이면 40분 추천)</span></div>
-                        </div>
-                        <div class="howto-step">
-                            <span class="howto-num"></span>
-                            <div class="howto-text"><b>시작 버튼</b><span>누르고 하던 일을 계속하세요. 화면을 꺼두셔도 됩니다</span></div>
-                        </div>
-                        <div class="howto-step">
-                            <span class="howto-num"></span>
-                            <div class="howto-text"><b>알림이 오면</b><span>음성 안내대로 짧게 몸을 풀어주고 '계속'을 눌러 다시 시작</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <b>추천 사용 시간</b> — 일할 때, 그리고 휴식할 때(특히 저녁 시간)에 사용하시면 좋습니다.
-                </div>
-                <div class="info-item">
-                    <b>문의</b> — 12년차 물리치료사가 임상 경험을 바탕으로 만들었습니다. 불편사항이나 문의사항은 아래 <b>댓글</b>로 남겨주시거나, <a href="mailto:wawoo1910s@gmail.com" style="color:var(--accent); font-weight:600;">wawoo1910s@gmail.com</a>으로 보내주세요.
-                </div>
+            <div class="howto-step">
+              <span class="howto-num"></span>
+              <div class="howto-text"><b>자세 모드 선택</b><span>사무실이면 앉은자세, 자기 전이면 누운자세로</span></div>
             </div>
-        </div>
-    </div>
-
-    <!-- ============================================
-      자세쌤 추천 아이템 — 쿠팡파트너스 실제 링크
-    ============================================= -->
-    <div class="rec-card">
-        <div class="rec-head">자세쌤 추천 아이템</div>
-        <div class="rec-sub">알림만으로 부족할 때, 자세를 유지하기 쉽게 도와주는 것들입니다.</div>
-
-        <a class="rec-item" href="https://link.coupang.com/a/fY31nub2t2" target="_blank" rel="noopener nofollow">
-            <div class="rec-name"><span class="rec-tag">의자</span>교정자세용 의자</div>
-            <div class="rec-why">하루 한 번도 허리를 편하게 기대기 어려운 의자, 계속 참고 앉아 계셨죠?</div>
-        </a>
-
-        <a class="rec-item" href="https://link.coupang.com/a/fZcphgkQsm" target="_blank" rel="noopener nofollow">
-            <div class="rec-name"><span class="rec-tag">매트리스</span>토퍼형 매트리스</div>
-            <div class="rec-why">
-                매일 아침 어깨관절은 뭉치고 허리는 뻐근해서 일어나기 싫은 그 느낌, 계속 참고 계셨죠?<br>
-                ※ 주의 : 기존의 잠자리에 추가로 설치 할 것
+            <div class="howto-step">
+              <span class="howto-num"></span>
+              <div class="howto-text"><b>알림 간격 선택</b><span>20 · 40 · 60분 중 선택 (처음이면 40분 추천)</span></div>
             </div>
-        </a>
-
-        <a class="rec-item" href="https://link.coupang.com/a/fY4i8kSrC0" target="_blank" rel="noopener nofollow">
-            <div class="rec-name"><span class="rec-tag">베개</span>목·어깨 베개</div>
-            <div class="rec-why">아침마다 목과 어깨가 동시에 뻐근하게 아픈 느낌이 반복된다면 베개부터 확인하세요.</div>
-        </a>
-
-        <div class="ad-disclosure" style="margin:16px 0 0;">이 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+            <div class="howto-step">
+              <span class="howto-num"></span>
+              <div class="howto-text"><b>시작 버튼</b><span>누르고 하던 일을 계속하세요. 화면을 꺼두셔도 됩니다</span></div>
+            </div>
+            <div class="howto-step">
+              <span class="howto-num"></span>
+              <div class="howto-text"><b>알림이 오면</b><span>음성 안내대로 짧게 몸을 풀어주고 '계속'을 눌러 다시 시작</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="info-item">
+          <b>추천 사용 시간</b> — 일할 때, 그리고 휴식할 때(특히 저녁 시간)에 사용하시면 좋습니다.
+        </div>
+        <div class="info-item">
+          <b>문의</b> — 12년차 물리치료사가 임상 경험을 바탕으로 만들었습니다. 불편사항이나 문의사항은 아래 <b>댓글</b>로 남겨주시거나, <a href="mailto:wawoo1910s@gmail.com" style="color:var(--accent); font-weight:600;">wawoo1910s@gmail.com</a>으로 보내주세요.
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="app-footer">
-        <p>© 2026 자세쌤. All rights reserved.<br>
-            제작: 순환자세연구소<br>
-            무단 복제 및 배포를 금지합니다.</p>
-    </div>
+  <!-- ============================================
+    자세쌤 추천 아이템 — 쿠팡파트너스 실제 링크
+  ============================================= -->
+  <div class="rec-card">
+    <div class="rec-head">자세쌤 추천 아이템</div>
+    <div class="rec-sub">알림만으로 부족할 때, 자세를 유지하기 쉽게 도와주는 것들입니다.</div>
+
+    <a class="rec-item" href="https://link.coupang.com/a/fY31nub2t2" target="_blank" rel="noopener nofollow">
+      <div class="rec-name"><span class="rec-tag">의자</span>교정자세용 의자</div>
+      <div class="rec-why">하루 한 번도 허리를 편하게 기대기 어려운 의자, 계속 참고 앉아 계셨죠?</div>
+    </a>
+
+    <a class="rec-item" href="https://link.coupang.com/a/fZcphgkQsm" target="_blank" rel="noopener nofollow">
+      <div class="rec-name"><span class="rec-tag">매트리스</span>토퍼형 매트리스</div>
+      <div class="rec-why">
+        매일 아침 어깨관절은 뭉치고 허리는 뻐근해서 일어나기 싫은 그 느낌, 계속 참고 계셨죠?<br>
+        ※ 주의 : 기존의 잠자리에 추가로 설치 할 것
+      </div>
+    </a>
+
+    <a class="rec-item" href="https://link.coupang.com/a/fY4i8kSrC0" target="_blank" rel="noopener nofollow">
+      <div class="rec-name"><span class="rec-tag">베개</span>목·어깨 베개</div>
+      <div class="rec-why">아침마다 목과 어깨가 동시에 뻐근하게 아픈 느낌이 반복된다면 베개부터 확인하세요.</div>
+    </a>
+
+    <div class="ad-disclosure" style="margin:16px 0 0;">이 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+  </div>
+
+  <div class="app-footer">
+    <p>© 2026 자세쌤. All rights reserved.<br>
+      제작: 순환자세연구소<br>
+      무단 복제 및 배포를 금지합니다.</p>
+  </div>
 </div>
 
 <div class="share-toast" id="shareToast">링크가 복사되었습니다</div>
 
 <div class="overlay" id="overlay">
-    <div class="overlay-card">
-        <div class="overlay-eyebrow">Alignment Check</div>
-        <div class="overlay-title" id="overlayTitle">자세를 확인할 시간이에요</div>
-        <div class="caption-box">
-            <div class="caption-current" id="captionCurrent">준비 중…</div>
-        </div>
-        <div class="caption-progress" id="captionProgress"></div>
-        <div class="overlay-text" id="overlayText"></div>
-        <div class="overlay-actions">
-            <button class="btn btn-primary" id="dismissBtn">계속</button>
-            <button class="btn btn-ghost" id="replayBtn">다시 듣기</button>
-            <button class="btn btn-danger" id="endBtn">종료</button>
-        </div>
+  <div class="overlay-card">
+    <div class="overlay-eyebrow">Alignment Check</div>
+    <div class="overlay-title" id="overlayTitle">자세를 확인할 시간이에요</div>
+    <div class="caption-box">
+      <div class="caption-current" id="captionCurrent">준비 중…</div>
     </div>
+    <div class="caption-progress" id="captionProgress"></div>
+    <div class="overlay-text" id="overlayText"></div>
+    <div class="overlay-actions">
+      <button class="btn btn-primary" id="dismissBtn">계속</button>
+      <button class="btn btn-ghost" id="replayBtn">다시 듣기</button>
+      <button class="btn btn-danger" id="endBtn">종료</button>
+    </div>
+  </div>
 </div>
 
 <script>
-    // 네이티브(안드로이드) 앱 안에서 실행 중인지 여부. 스크립트 어디서든 즉시 참조 가능하도록 최상단에 둔다.
-    const IS_NATIVE = (typeof AndroidBridge !== 'undefined' && AndroidBridge && AndroidBridge.isNative);
+  // 네이티브(안드로이드) 앱 안에서 실행 중인지 여부. 스크립트 어디서든 즉시 참조 가능하도록 최상단에 둔다.
+  const IS_NATIVE = (typeof AndroidBridge !== 'undefined' && AndroidBridge && AndroidBridge.isNative);
 
-    const TIP_LIBRARY = {
-      '목': {
-        sitting: [
-          { title: "목 이완 안내", text: "다리 내리고, 등 기대고, 머리 기대고, 다리 힘 빼고, 허리 힘 빼고, 목 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ],
-        lying: [
-          { title: "목 이완 안내", text: "바로 눕고, 다리 내리고, 허리 힘 빼고, 목에 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ]
-      },
-      '허리': {
-        sitting: [
-          { title: "허리 이완 안내", text: "다리 내리고, 등 기대고, 엉덩이 수평 맞추고, 다리 힘 빼고, 허리 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ],
-        lying: [
-          { title: "허리 이완 안내", text: "바로 눕고, 다리 내리고, 엉덩이 수평 맞추고, 허리 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ]
-      },
-      '등': {
-        sitting: [
-          { title: "등 이완 안내", text: "다리 내리고, 등 기대고, 엉덩이 수평 맞추고, 다리 힘 빼고, 등허리 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ],
-        lying: [
-          { title: "등 이완 안내", text: "바로 눕고, 다리 내리고, 등 수평 맞추고, 등허리 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ]
-      },
-      '어깨': {
-        sitting: [
-          { title: "어깨 이완 안내", text: "다리 내리고, 등 기대고, 머리 기대고, 양손 내리고, 어깨 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ],
-        lying: [
-          { title: "어깨 이완 안내", text: "바로 눕고, 다리 내리고, 뒤통수 대고, 차렷 자세, 어깨 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ]
-      },
-      '골반': {
-        sitting: [
-          { title: "골반 이완 안내", text: "다리 내리고, 등 기대고, 엉덩이 수평 맞추고, 골반 열고, 골반 앞쪽 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ],
-        lying: [
-          { title: "골반 이완 안내", text: "바로 눕고, 다리 내리고, 엉덩이 수평 맞추고, 골반 열고, 골반 앞쪽 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ]
-      },
-      '무릎': {
-        sitting: [
-          { title: "무릎 이완 안내", text: "다리 내리고, 등 기대고, 발 딛지 말고, 무릎 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ],
-        lying: [
-          { title: "무릎 이완 안내", text: "바로 눕고, 다리 내리고, 골반 열고, 무릎 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ]
-      },
-      '발목': {
-        sitting: [
-          { title: "발목 이완 안내", text: "다리 내리고, 등 기대고, 발 딛지 말고, 발목 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ],
-        lying: [
-          { title: "발목 이완 안내", text: "바로 눕고, 다리 내리고, 골반 열고, 발목 힘 빼고, 한숨 돌리고, 다시 시작." }
-        ]
-      },
-      '전신': {
-        sitting: [
-          { title: "전신 이완 안내", text: "다리 내리고, 손 내리고, 등 기대고, 머리 기대고, 발 딛지 말고, 다리 힘 빼고, 허리 힘 빼고, 목 힘 빼고, 어깨 힘 빼고, 한숨 두번 쉬고, 하나 둘, 다시 시작." }
-        ],
-        lying: [
-          { title: "전신 이완 안내", text: "바로 눕고, 다리 내리고, 손 내리고 차렷자세, 골반 열고, 다리 힘 빼고, 허리 힘 빼고, 목 힘 빼고, 어깨 힘 빼고, 한숨 두번 쉬고, 하나 둘, 다시 시작." }
-        ]
-      }
-    };
+  const PART_MENU = {
+    '목': [
+      { label: '거북목·일자목', title: '거북목·일자목 안내', sitting: "발은 편하게 내리고 등과 머리 뒤통수를 가볍게 기대어 볼게요. 목에 불편하게 남아있는 힘을 툭 내려놓고, 깊게 한숨을 쉬어봅니다. 참 잘하셨어요. 이제 편안하게 하시던 일로 다시 돌아가 보세요.", lying: "바로 누워서 발은 편하게 내려놓고, 머리 뒤통수를 지면에 가볍게 대어 볼게요. 목 주변에 느껴지는 불편한 힘을 툭 내려놓고 깊게 호흡해 봅니다. 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요." },
+    ],
+    '어깨': [
+      { label: '왼쪽 어깨', title: '왼쪽 어깨 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 머리도 편안하게 뒤로 기댄 상태에서 왼손을 내려놓아 줍니다. 왼쪽 어깨의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어볼까요? 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고 왼손을 편안하게 내려놓아 주세요. 왼쪽 어깨의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어봅니다. 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요." },
+      { label: '오른쪽 어깨', title: '오른쪽 어깨 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 머리도 편안하게 뒤로 기댄 상태에서 오른손을 내려놓아 줍니다. 오른쪽 어깨의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어볼까요? 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고 오른손을 편안하게 내려놓아 주세요. 오른쪽 어깨의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어봅니다. 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요." },
+      { label: '목+어깨', title: '목+어깨 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 머리도 편안하게 뒤로 기댄 상태에서 양손을 편하게 내려놓습니다. 목과 어깨의 힘을 살짝 풀어주고, 깊게 한숨을 쉬어볼까요? 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고 양손을 내려놓습니다. 목과 어깨의 힘을 살짝 풀어주고, 깊게 한숨을 쉬어봅니다. 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요." },
+      { label: '어깨 자세교정', title: '어깨 자세교정 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 머리도 편안하게 뒤로 기댄 상태에서 양손을 편하게 내려놓습니다. 어깨의 힘을 살짝 풀어주고, 깊게 한숨을 쉬어볼까요? 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고 양손을 내려놓습니다. 어깨의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어봅니다. 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요." },
+      { label: '어깨 결림', title: '어깨 결림 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 머리도 편안하게 뒤로 기댄 상태에서 양손을 내려놓습니다. 목과 어깨 결리는 곳의 힘을 살짝 풀어주고, 깊게 한숨을 쉬어볼까요? 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고 양손을 내려놓습니다. 목과 어깨 결리는 곳의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어봅니다. 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요." },
+      { label: '어깨 뭉침', title: '어깨 뭉침 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 머리도 편안하게 뒤로 기댄 상태에서 양손을 내려놓습니다. 목과 어깨 뭉치는 곳의 힘을 살짝 풀어주고, 깊게 한숨을 쉬어볼까요? 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고 양손을 내려놓습니다. 목과 어깨 뭉치는 곳의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어봅니다. 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요." },
+      { label: '굽은 어깨', title: '굽은 어깨 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 머리도 편안하게 뒤로 기댄 상태에서 양손을 내려놓습니다. 목과 어깨의 힘을 살짝 풀고, 어깨를 편안하게 가볍게 펴보세요. 깊게 한숨을 쉬어볼까요? 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고 양손을 내려놓습니다. 목과 어깨의 힘을 풀어주고 어깨를 편안하게 펴보세요. 깊게 한숨을 쉬어봅니다. 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요." },
+      { label: '어깨 근육통', title: '어깨 근육통 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 머리도 편안하게 뒤로 기댄 상태에서 양손을 내려놓습니다. 목과 어깨 통증이 있는 부위의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어볼까요? 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고 양손을 내려놓습니다. 목과 어깨 통증이 있는 부위의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어봅니다. 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요." },
+      { label: '어깨 저림', title: '어깨 저림 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 머리도 편안하게 뒤로 기댄 상태에서 양손을 내려놓습니다. 목과 어깨 저리는 곳의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어볼까요? 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고 양손을 내려놓습니다. 목과 어깨 저리는 곳의 힘을 살짝 풀어보고, 깊게 한숨을 쉬어봅니다. 참 잘하셨어요. 이제 하시던 일로 편안하게 돌아가 보세요." },
+    ],
+    '등': [
+      { label: '오른쪽 등', title: '오른쪽 등 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼까요? 등의 좌우 기울기를 바르게 맞추고, 오른손도 편하게 내려놓으세요. 오른쪽 어깨의 힘을 풀고, 오른쪽 등 통증이 느껴지는 곳도 힘을 툭 빼봅니다. 깊게 한숨을 내쉬고, 참 잘하셨어요. 이제 하시던 일로 돌아가 보세요.", lying: "편안하게 바로 누워서 다리를 내리고, 허벅지 아래 뜨는 공간은 베개로 잘 채워볼게요. 다리 힘은 툭 빼고 양손도 내려놓습니다. 등의 좌우 기울기와 회전을 바르게 맞춘 뒤, 오른쪽 등 통증이 느껴지는 곳의 힘을 가볍게 풀어보세요. 깊게 한숨을 내쉬고, 이제 하시던 일로 돌아가 보세요." },
+      { label: '왼쪽 등', title: '왼쪽 등 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼까요? 등의 좌우 기울기를 바르게 맞추고, 왼손도 편하게 내려놓으세요. 왼쪽 어깨의 힘을 풀고, 왼쪽 등 통증이 느껴지는 곳도 힘을 툭 빼봅니다. 깊게 한숨을 내쉬고, 참 잘하셨어요. 이제 하시던 일로 돌아가 보세요.", lying: "편안하게 바로 누워서 다리를 내리고, 허벅지 아래 뜨는 공간은 베개로 잘 채워볼게요. 다리 힘은 툭 빼고 양손도 내려놓습니다. 등의 좌우 기울기와 회전을 바르게 맞춘 뒤, 왼쪽 등 통증이 느껴지는 곳의 힘을 가볍게 풀어보세요. 깊게 한숨을 내쉬고, 이제 하시던 일로 돌아가 보세요." },
+      { label: '등 전체', title: '등 전체 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼까요? 등의 좌우 기울기를 바르게 맞추고, 양손도 편하게 내려놓으세요. 양쪽 어깨의 힘을 풀어주고, 등 통증이 있는 곳의 힘을 한 번 더 푹 빼봅니다. 깊게 한숨을 내쉬고, 참 잘하셨어요. 이제 하시던 일로 돌아가 보세요.", lying: "편안하게 바로 누워서 다리를 내리고, 허벅지 아래 뜨는 공간은 베개로 잘 채워볼게요. 다리 힘은 툭 빼고 양손도 내려놓습니다. 등의 좌우 기울기와 회전을 바르게 맞춘 뒤, 등 전체의 긴장을 푹 내려놓아 봅니다. 깊게 한숨을 내쉬고, 이제 하시던 일로 돌아가 보세요." },
+      { label: '등 가운데', title: '등 가운데 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼까요? 등의 좌우 기울기를 바르게 맞추고, 양손도 편하게 내려놓으세요. 양쪽 어깨의 힘을 풀어주고, 등 가운데 통증이 있는 곳의 힘을 한 번 더 푹 빼봅니다. 깊게 한숨을 내쉬고, 참 잘하셨어요. 이제 하시던 일로 돌아가 보세요.", lying: "편안하게 바로 누워서 다리를 내리고, 허벅지 아래 뜨는 공간은 베개로 잘 채워볼게요. 다리 힘은 툭 빼고 양손도 내려놓습니다. 등의 좌우 기울기와 회전을 바르게 맞춘 뒤, 등 가운데 뭉친 힘을 편안하게 풀어보세요. 깊게 한숨을 내쉬고, 이제 하시던 일로 돌아가 보세요." },
+    ],
+    '허리': [
+      { label: '허리 통증', title: '허리 통증 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 다리 힘도 툭 빼고, 허리 힘도 살짝 풀어주세요. 엉덩이 좌우 수평을 바르게 맞춘 뒤, 다리 힘을 한 번 더 푹 빼봅니다. 편안하게 한숨을 깊게 내쉬고, 이제 하시던 일을 다시 시작해 보세요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고, 허리 힘은 편안하게 풀어볼게요. 엉덩이 수평도 바르게 맞추고, 깊게 한숨을 쉬어보세요. 참 잘했어요. 이제 하시던 일로 돌아가 보세요. 가급적이면 방금처럼 바로 누운 자세를 최대한 유지해 주는 게 좋아요." },
+      { label: '허리 삐끗(급성)', title: '허리 삐끗(급성) 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 다리 힘도 툭 빼고, 허리 힘도 살짝 풀어주세요. 엉덩이 좌우 수평을 바르게 맞춘 뒤, 다리 힘을 한 번 더 푹 빼봅니다. 편안하게 한숨을 깊게 내쉬고, 이제 하시던 일을 다시 시작해 보세요. 몸을 위해 반복적으로 걸었다가 누워서 쉬어주는 걸 추천해 드려요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고, 허리 힘은 편안하게 풀어볼게요. 엉덩이 수평도 바르게 맞추고, 깊게 한숨을 쉬어보세요. 참 잘했어요. 이제 하시던 일로 돌아가 보세요. 가급적이면 방금처럼 바로 누운 자세를 최대한 유지해 주는 게 좋아요." },
+      { label: '허리 아플 때', title: '허리 아플 때 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 다리 힘도 툭 빼고, 허리 힘도 살짝 풀어주세요. 엉덩이 좌우 수평을 바르게 맞춘 뒤, 다리 힘을 한 번 더 푹 빼봅니다. 편안하게 한숨을 깊게 내쉬고, 이제 하시던 일을 다시 시작해 보세요. 무리한 운동보다는 반복적으로 걸었다가 누워서 쉬어주는 편이 훨씬 좋아요.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고, 허리 힘은 편안하게 풀어볼게요. 엉덩이 수평도 바르게 맞추고, 깊게 한숨을 쉬어보세요. 참 잘했어요. 이제 하시던 일로 돌아가 보세요. 가급적이면 방금처럼 바로 누운 자세를 최대한 유지해 주는 게 좋아요." },
+      { label: '꼬리뼈 통증', title: '꼬리뼈 통증 안내', sitting: "발은 편하게 내리고 등은 가볍게 기대어 볼게요. 골반을 편안하게 열어 팔자다리를 만든 뒤, 골반과 허벅지의 힘을 툭 내려놓습니다. 꼬리뼈에 쏠린 압박을 엉덩이와 허벅지 전체로 넓게 분산시키고, 다리는 조금 더 아래로 편안하게 내려보세요. 깊게 한숨을 돌리고, 이제 하시던 일로 다시 돌아가 보세요. 꼬리뼈 통증이 느껴질 때는 중간중간 반복적으로 서서 움직여 주시는 것이 좋습니다.", lying: "바로 누워서 발을 편하게 내려놓고, 엉덩이 밑 빈 공간은 베개로 채워볼게요. 허벅지를 바닥 쪽으로 더 무겁게 내려놓으면서, 꼬리뼈에 쏠린 압박을 허벅지 전체로 넓게 분산시켜 봅니다. 깊게 한숨을 돌리고, 이제 편안하게 하시던 일을 다시 시작해 보세요." },
+      { label: '허리 스트레칭', title: '허리 스트레칭 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 다리 힘도 툭 빼고, 허리 힘도 살짝 풀어주세요. 엉덩이 좌우 수평을 바르게 맞춘 뒤, 다리 힘을 한 번 더 푹 빼봅니다. 편안하게 한숨을 깊게 내쉬고, 이제 하시던 일을 다시 시작해 보세요. 과한 스트레칭보다는 반복적으로 걸었다가 누워서 휴식하는 것을 추천합니다.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고, 허리 힘은 편안하게 풀어볼게요. 엉덩이 수평도 바르게 맞추고, 깊게 한숨을 쉬어보세요. 참 잘했어요. 이제 하시던 일로 돌아가 보세요. 가급적이면 방금처럼 바로 누운 자세를 최대한 유지해 주는 게 좋아요." },
+      { label: '허리 교정', title: '허리 교정 안내', sitting: "다리는 편하게 내리고, 등은 가볍게 기대어 볼게요. 다리 힘도 툭 빼고, 허리 힘도 살짝 풀어주세요. 엉덩이 좌우수평을 바르게 맞춘 뒤, 다리 힘을 한 번 더 푹 빼봅니다. 편안하게 한숨을 깊게 내쉬고, 이제 하시던 일을 다시 시작해 보세요. 일상 속에서 걷기와 눕기를 반복하며 몸을 다독여주는 게 좋습니다.", lying: "발부터 머리까지 수평으로 바로 누워볼까요? 다리는 자연스럽게 내려놓고, 허리 힘은 편안하게 풀어볼게요. 엉덩이 수평도 바르게 맞추고, 깊게 한숨을 쉬어보세요. 참 잘했어요. 이제 하시던 일로 돌아가 보세요. 가급적이면 방금처럼 바로 누운 자세를 최대한 유지해 주는 게 좋아요." },
+    ],
+    '골반': [
+      { label: '골반 틀어짐·전방경사', title: '골반 틀어짐·전방경사 안내', sitting: "다리는 편하게 내리고 등은 뒤로 가볍게 기대어 볼게요. 골반과 상체의 좌우 기울기를 바르게 맞추고, 배는 살짝 집어넣으면서 가슴뼈를 차분히 내려봅니다. 골반을 편안하게 열어 팔자다리를 만든 뒤, 승마살 부위와 골반 주변의 힘을 완전히 툭 빼보세요. 깊게 한숨을 내쉬고, 아주 잘하고 계셔요. 이제 하시던 일로 돌아가시되, 허리 뒤에 쿠션을 하나 대어주시는 것을 추천합니다.", lying: "똑바로 누워서 다리를 편하게 내려놓아 볼게요. 엉덩이 밑 빈 공간에는 베개를 받쳐주고, 골반을 살짝 열어 팔자다리를 만들어 봅니다. 골반과 승마살, 허벅지의 힘을 툭 빼낸 뒤, 골반의 좌우 기울기를 바르게 맞추어 주세요. 이제 깊게 한숨을 쉬어볼까요? 아주 잘하고 계셔요. 하시던 일로 천천히 돌아가 보세요." },
+      { label: '고관절 통증', title: '고관절 통증 안내', sitting: "발은 편하게 내리고 등은 가볍게 기대어 볼게요. 골반을 편안하게 열어 팔자다리를 만든 뒤, 골반과 허벅지의 힘을 툭 내려놓아 봅니다. 깊게 한숨을 돌리고, 이제 하시던 일로 다시 돌아가 보세요. 고관절 통증이 있다면 가만히 있기보다 반복적으로 서서 고관절을 자연스럽게 움직여 주시는 것을 추천합니다.", lying: "바로 누워서 발은 편하게 내려놓아 볼게요. 엉덩이 밑 빈 공간은 베개로 차분히 채워주고, 골반을 열어 팔자다리를 만들어 봅니다. 골반과 허벅지, 허리의 힘을 툭 내려놓고 깊게 한숨을 돌려보세요. 참 잘하셨어요. 이제 하시던 일로 천천히 돌아가 보세요." },
+      { label: '오른쪽 골반', title: '오른쪽 골반 안내', sitting: "다리는 편하게 내리고 등은 뒤로 가볍게 기대어 볼게요. 골반과 상체의 좌우 기울기를 바르게 맞추고, 배는 살짝 집어넣으면서 가슴뼈를 차분히 내려봅니다. 골반을 편안하게 열어 팔자다리를 만들고, 오른쪽 골반을 조금 더 지그시 열어줄게요. 이제 승마살 부위와 골반 주변의 힘을 완전히 툭 빼보세요. 깊게 한숨을 내쉬고, 아주 잘하고 계셔요. 이제 하시던 일로 돌아가시되, 허리 뒤에 쿠션을 하나 대어주시는 것을 추천합니다.", lying: "똑바로 누워서 다리를 편하게 내려놓아 볼게요. 엉덩이 밑 빈 공간에는 베개를 받쳐주고, 골반을 살짝 열어 팔자다리를 만들어 봅니다. 여기서 오른쪽 골반을 조금 더 지그시 열어줄게요. 골반과 승마살, 허벅지의 힘을 툭 빼낸 뒤, 골반의 좌우 기울기를 바르게 맞추어 주세요. 이제 깊게 한숨을 쉬어볼까요? 아주 잘하고 계셔요. 하시던 일로 천천히 돌아가 보세요." },
+      { label: '골반 스트레칭', title: '골반 스트레칭 안내', sitting: "다리는 편하게 내리고 등은 뒤로 가볍게 기대어 볼게요. 골반과 상체의 좌우 기울기를 바르게 맞추고, 배는 살짝 집어넣으면서 가슴뼈를 차분히 내려봅니다. 골반을 편안하게 열어 팔자다리를 만든 뒤, 승마살 부위와 골반 주변의 힘을 완전히 툭 빼보세요. 깊게 한숨을 내쉬고, 아주 잘하고 계셔요. 이제 하시던 일로 돌아가시되, 과도한 스트레칭보다는 이처럼 반복적으로 자세를 바로잡아 주시는 것을 추천합니다.", lying: "똑바로 누워서 다리를 편하게 내려놓아 볼게요. 엉덩이 밑 빈 공간에는 베개를 받쳐주고, 골반을 살짝 열어 팔자다리를 만들어 봅니다. 골반과 승마살, 허벅지의 힘을 툭 빼낸 뒤, 골반의 좌우 기울기를 바르게 맞추어 주세요. 이제 깊게 한숨을 쉬어볼까요? 아주 잘하고 계셔요. 하시던 일로 천천히 돌아가 보세요." },
+    ],
+    '다리': [
+      { label: '오다리', title: '오다리 안내', sitting: "발은 편하게 내리고 간격은 넓게 벌려볼게요. 무릎 간격도 골반 너비만큼 넉넉히 두고 등은 뒤로 가볍게 기대어 봅니다. 다리 힘을 빼고 골반을 열어 팔자다리를 만든 뒤, 골반과 승마살, 허벅지, 그리고 사타구니 안쪽까지 힘을 푹 풀어주세요. 한숨을 깊게 돌리고, 아주 잘하고 계셔요. 이제 하시던 일로 돌아가시되, 오다리 유형은 특히 걸을 때 양발 폭이 너무 가까워지지 않도록 신경 써주시는 게 좋습니다.", lying: "편안하게 바로 누워서, 엉덩이 아래 빈 공간은 베개로 차분히 채워볼게요. 무릎은 골반 너비만큼 넉넉히 벌리고, 골반을 열어 팔자다리를 만들어 봅니다. 무릎과 발끝의 방향도 자연스럽게 바깥쪽을 향하도록 맞춰주세요. 이제 골반과 허벅지, 무릎, 그리고 사타구니 안쪽의 힘까지 툭 내려놓아 봅니다. 깊게 한숨을 한 번 내쉬어 볼까요? 참 잘하고 계셔요. 방금의 편안하고 바른 느낌을 최대한 오랫동안 유지해 보세요." },
+      { label: '안짱다리', title: '안짱다리 안내', sitting: "발은 편하게 내리고 간격은 넓게 벌려볼게요. 무릎 간격도 골반 너비만큼 넉넉히 두고 등은 뒤로 가볍게 기대어 봅니다. 다리 힘을 빼고 골반을 열어 팔자다리를 만든 뒤, 골반과 승마살, 허벅지, 사타구니 안쪽과 양 무릎 바깥쪽 힘까지 툭 내려놓으세요. 한숨을 깊게 돌리고, 아주 잘하고 계셔요. 이제 하시던 일로 돌아가시되, 안짱다리 유형은 평소에도 무릎 사이 간격을 넓게 유지해 주셔야 합니다.", lying: "편안하게 바로 누워서, 엉덩이 아래 빈 공간은 베개로 차분히 채워볼게요. 무릎은 골반 너비만큼 넉넉히 벌리고, 골반을 열어 팔자다리를 만들어 봅니다. 무릎과 발끝의 방향도 자연스럽게 바깥쪽을 향하도록 맞춰주세요. 이제 골반과 허벅지, 무릎, 그리고 사타구니 안쪽의 힘까지 툭 내려놓아 봅니다. 깊게 한숨을 한 번 내쉬어 볼까요? 참 잘하고 계셔요. 방금의 편안하고 바른 느낌을 최대한 오랫동안 유지해 보세요." },
+      { label: 'X자 다리', title: 'X자 다리 안내', sitting: "발은 편하게 내리고 간격은 넓게 벌려볼게요. 무릎 간격도 골반 너비만큼 넉넉히 두고 등은 뒤로 가볍게 기대어 봅니다. 다리 힘을 빼고 골반을 열어 팔자다리를 만든 뒤, 골반과 승마살, 허벅지, 사타구니 안쪽과 양 무릎 바깥쪽 힘까지 툭 내려놓으세요. 한숨을 깊게 돌리고, 아주 잘하고 계셔요. 이제 하시던 일로 돌아가시되, X자 다리 유형은 평소에도 무릎 사이 간격을 항상 넓게 유지해 주는 게 중요합니다.", lying: "편안하게 바로 누워서, 엉덩이 아래 빈 공간은 베개로 차분히 채워볼게요. 무릎은 골반 너비만큼 넉넉히 벌리고, 골반을 열어 팔자다리를 만들어 봅니다. 무릎과 발끝의 방향도 자연스럽게 바깥쪽을 향하도록 맞춰주세요. 이제 골반과 허벅지, 무릎, 그리고 사타구니 안쪽의 힘까지 툭 내려놓아 봅니다. 깊게 한숨을 한 번 내쉬어 볼까요? 참 잘하고 계셔요. 방금의 편안하고 바른 느낌을 최대한 오랫동안 유지해 보세요." },
+      { label: '다리 교정', title: '다리 교정 안내', sitting: "발은 편하게 내리고 간격은 넓게 벌려볼게요. 무릎 간격도 골반 너비만큼 넉넉히 두고 등은 뒤로 가볍게 기대어 봅니다. 다리 힘을 빼고 골반을 열어 팔자다리를 만든 뒤, 골반과 승마살, 허벅지, 그리고 사타구니 안쪽까지 힘을 푹 풀어주세요. 한숨을 깊게 돌리고, 아주 잘하고 계셔요. 이제 하시던 일로 돌아가시되, 일상 중에도 골반과 허벅지, 다리의 힘을 계속해서 풀어주는 습관을 가져보세요.", lying: "편안하게 바로 누워서, 엉덩이 아래 빈 공간은 베개로 차분히 채워볼게요. 무릎은 골반 너비만큼 넉넉히 벌리고, 골반을 열어 팔자다리를 만들어 봅니다. 무릎과 발끝의 방향도 자연스럽게 바깥쪽을 향하도록 맞춰주세요. 이제 골반과 허벅지, 무릎, 그리고 사타구니 안쪽의 힘까지 툭 내려놓아 봅니다. 깊게 한숨을 한 번 내쉬어 볼까요? 참 잘하고 계셔요. 방금의 편안하고 바른 느낌을 최대한 오랫동안 유지해 보세요." },
+      { label: '휜 다리', title: '휜 다리 안내', sitting: "발은 편하게 내리고 간격은 넓게 벌려볼게요. 무릎 간격도 골반 너비만큼 넉넉히 두고 등은 뒤로 가볍게 기대어 봅니다. 다리 힘을 빼고 골반을 열어 팔자다리를 만든 뒤, 골반과 승마살, 허벅지, 사타구니 안쪽과 양 무릎 바깥쪽 힘까지 툭 내려놓으세요. 한숨을 깊게 돌리고, 아주 잘하고 계셔요. 이제 하시던 일로 돌아가시되, 휜 다리 유형은 평소에도 무릎 사이 간격을 넓게 유지해 주시는 것이 좋습니다.", lying: "편안하게 바로 누워서, 엉덩이 아래 빈 공간은 베개로 차분히 채워볼게요. 무릎은 골반 너비만큼 넉넉히 벌리고, 골반을 열어 팔자다리를 만들어 봅니다. 무릎과 발끝의 방향도 자연스럽게 바깥쪽을 향하도록 맞춰주세요. 이제 골반과 허벅지, 무릎, 그리고 사타구니 안쪽의 힘까지 툭 내려놓아 봅니다. 깊게 한숨을 한 번 내쉬어 볼까요? 참 잘하고 계셔요. 방금의 편안하고 바른 느낌을 최대한 오랫동안 유지해 보세요." },
+    ],
+    '무릎': [
+      { label: '무릎 통증', title: '무릎 통증 안내', sitting: "발은 편하게 내리고 등은 가볍게 기대어 볼게요. 골반을 편안하게 열어 팔자다리를 만든 뒤, 골반과 허벅지의 힘을 풀어주고 무릎 바깥쪽도 느슨하게 힘을 빼봅니다. 깊게 한숨을 돌리고, 이제 하시던 일로 다시 돌아가 보세요.", lying: "바로 누워서 발은 편하게 내려놓아 볼게요. 엉덩이 밑 빈 공간은 베개로 차분히 채워주고, 골반을 열어 팔자다리를 만들어 봅니다. 골반과 허벅지의 힘을 풀어주고, 무릎 바깥쪽 힘까지 한 번 더 푹 빼보세요. 깊게 한숨을 돌린 뒤, 이제 하시던 일로 돌아가시면 됩니다." },
+    ],
+    '발목': [
+      { label: '발목 통증', title: '발목 통증 안내', sitting: "발은 편하게 내리고 등은 가볍게 기대어 볼게요. 골반을 편안하게 열어 팔자다리를 만든 뒤, 골반과 허벅지의 힘을 풀어줍니다. 바닥을 강하게 딛지 말고 발목의 힘까지 툭 빼보세요. 깊게 한숨을 돌리고, 이제 하시던 일로 다시 돌아가 보세요. 발목 통증을 예방하려면 까치발 자세를 오래 유지하거나 종아리가 지속적으로 눌리지 않도록 주의해 주는 것이 좋습니다.", lying: "바로 누워서 발을 편하게 내려놓고, 엉덩이 밑 빈 공간은 베개로 차분히 채워볼게요. 다리의 힘을 툭 빼고, 발목에 남아있는 긴장까지 느슨하게 풀어줍니다. 한숨을 편안하게 돌린 뒤, 이제 하시던 일로 돌아가 보세요." },
+    ],
+    '전신': [
+      { label: '전신', title: '전신 안내', sitting: "다리 내리고, 손 내리고, 등 기대고, 머리 기대고, 발 딛지 말고, 다리 힘 빼고, 허리 힘 빼고, 목 힘 빼고, 어깨 힘 빼고, 한숨 두번 쉬고, 하나 둘, 다시 시작.", lying: "바로 눕고, 다리 내리고, 손 내리고 차렷자세, 골반 열고, 다리 힘 빼고, 허리 힘 빼고, 목 힘 빼고, 어깨 힘 빼고, 한숨 두번 쉬고, 하나 둘, 다시 시작." },
+    ],
+  };
 
-    let mode = 'sitting';
-    let selectedPart = '전신';
-    let soundEnabled = true;
-    const speechRate = 0.95; // 음성 속도는 하나로 통일 (사용자 선택 불가)
-    let wakeLock = null;
-    let currentUtterance = null; // GC로 인한 무음 방지용 참조 유지
-    let currentCaptionTimers = []; // 자막 스케줄 타이머 (취소용)
-    let pendingSpeechTimer = null; // 알림음→음성 사이 지연 타이머 (취소용)
+  // 부위 -> 세부항목 첫 번째를 기본값으로 쓰기 위한 헬퍼
+  function getMenuItem(part, subIndex){
+    const list = PART_MENU[part] || PART_MENU['전신'];
+    return list[Math.min(subIndex || 0, list.length - 1)];
+  }
 
-    /* ---------- 설정 저장 / 불러오기 ---------- */
-    const STORAGE_KEY = 'jaseSsam.settings.v1';
-    const USAGE_KEY = 'jaseSsam.usage.v1';
+  let mode = 'sitting';
+  let selectedPart = '전신';
+  let selectedSub = 0;   // 선택된 세부항목 인덱스 (부위 안에서)
+  let soundEnabled = true;
+  const speechRate = 0.95; // 음성 속도는 하나로 통일 (사용자 선택 불가)
+  let wakeLock = null;
+  let currentUtterance = null; // GC로 인한 무음 방지용 참조 유지
+  let currentCaptionTimers = []; // 자막 스케줄 타이머 (취소용)
+  let pendingSpeechTimer = null; // 알림음→음성 사이 지연 타이머 (취소용)
 
-    function saveSettings(){
+  /* ---------- 설정 저장 / 불러오기 ---------- */
+  const STORAGE_KEY = 'jaseSsam.settings.v1';
+  const USAGE_KEY = 'jaseSsam.usage.v1';
+
+  function saveSettings(){
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        part: selectedPart,
+        sub: selectedSub,
+        mode: mode,
+        interval: intervalMin,
+        sound: soundEnabled
+      }));
+    } catch(e) { /* 저장 불가 환경은 무시 */ }
+  }
+
+  function loadSettings(){
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch(e) { return null; }
+  }
+
+  /* ---------- 사용 기록 (날짜별 횟수) ---------- */
+  function todayKey(){
+    const d = new Date();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return d.getFullYear() + '-' + m + '-' + day;
+  }
+
+  function loadUsage(){
+    // 네이티브 앱 안에서는 안드로이드가 알림이 울릴 때마다 직접 기록해둔 값을 우선 사용한다
+    // (앱이 꺼져 있거나 화면이 꺼져 있어도 안드로이드 쪽 기록은 누락되지 않는다)
+    if (typeof IS_NATIVE !== 'undefined' && IS_NATIVE){
       try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify({
-          part: selectedPart,
-          mode: mode,
-          interval: intervalMin,
-          sound: soundEnabled
-        }));
-      } catch(e) { /* 저장 불가 환경은 무시 */ }
-    }
-
-    function loadSettings(){
-      try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return null;
-        return JSON.parse(raw);
-      } catch(e) { return null; }
-    }
-
-    /* ---------- 사용 기록 (날짜별 횟수) ---------- */
-    function todayKey(){
-      const d = new Date();
-      const m = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      return d.getFullYear() + '-' + m + '-' + day;
-    }
-
-    function loadUsage(){
-      // 네이티브 앱 안에서는 안드로이드가 알림이 울릴 때마다 직접 기록해둔 값을 우선 사용한다
-      // (앱이 꺼져 있거나 화면이 꺼져 있어도 안드로이드 쪽 기록은 누락되지 않는다)
-      if (typeof IS_NATIVE !== 'undefined' && IS_NATIVE){
-        try {
-          const raw = AndroidBridge.getUsageJson();
-          const obj = JSON.parse(raw);
-          if (obj && typeof obj === 'object') return obj;
-        } catch(e) { /* 브릿지 실패 시 아래 localStorage로 대체 */ }
-      }
-      try {
-        const raw = localStorage.getItem(USAGE_KEY);
-        if (!raw) return {};
+        const raw = AndroidBridge.getUsageJson();
         const obj = JSON.parse(raw);
-        return (obj && typeof obj === 'object') ? obj : {};
-      } catch(e) { return {}; }
+        if (obj && typeof obj === 'object') return obj;
+      } catch(e) { /* 브릿지 실패 시 아래 localStorage로 대체 */ }
     }
+    try {
+      const raw = localStorage.getItem(USAGE_KEY);
+      if (!raw) return {};
+      const obj = JSON.parse(raw);
+      return (obj && typeof obj === 'object') ? obj : {};
+    } catch(e) { return {}; }
+  }
 
-    function saveUsage(usage){
-      try {
-        // 180일 이전 기록은 정리
-        const cutoff = new Date();
-        cutoff.setDate(cutoff.getDate() - 180);
-        Object.keys(usage).forEach(k => {
-          const d = new Date(k);
-          if (!isNaN(d) && d < cutoff) delete usage[k];
-        });
-        localStorage.setItem(USAGE_KEY, JSON.stringify(usage));
-      } catch(e) {}
-    }
+  function saveUsage(usage){
+    try {
+      // 180일 이전 기록은 정리
+      const cutoff = new Date();
+      cutoff.setDate(cutoff.getDate() - 180);
+      Object.keys(usage).forEach(k => {
+        const d = new Date(k);
+        if (!isNaN(d) && d < cutoff) delete usage[k];
+      });
+      localStorage.setItem(USAGE_KEY, JSON.stringify(usage));
+    } catch(e) {}
+  }
 
-    function recordUsage(){
-      const usage = loadUsage();
-      const k = todayKey();
-      usage[k] = (usage[k] || 0) + 1;
-      saveUsage(usage);
-      renderStats();
-    }
+  function recordUsage(){
+    const usage = loadUsage();
+    const k = todayKey();
+    usage[k] = (usage[k] || 0) + 1;
+    saveUsage(usage);
+    renderStats();
+  }
 
-    // 이번 주(월요일 시작) 시작일
-    function weekStartKey(){
-      const d = new Date();
-      const dow = (d.getDay() + 6) % 7; // 월=0
-      d.setDate(d.getDate() - dow);
+  // 이번 주(월요일 시작) 시작일
+  function weekStartKey(){
+    const d = new Date();
+    const dow = (d.getDay() + 6) % 7; // 월=0
+    d.setDate(d.getDate() - dow);
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return d.getFullYear() + '-' + m + '-' + day;
+  }
+
+  function calcStreak(usage){
+    let streak = 0;
+    const d = new Date();
+    for (let i = 0; i < 400; i++){
       const m = String(d.getMonth() + 1).padStart(2, '0');
       const day = String(d.getDate()).padStart(2, '0');
-      return d.getFullYear() + '-' + m + '-' + day;
-    }
-
-    function calcStreak(usage){
-      let streak = 0;
-      const d = new Date();
-      for (let i = 0; i < 400; i++){
-        const m = String(d.getMonth() + 1).padStart(2, '0');
-        const day = String(d.getDate()).padStart(2, '0');
-        const k = d.getFullYear() + '-' + m + '-' + day;
-        if (usage[k] > 0){
-          streak++;
-        } else if (i > 0){
-          break;
-        } else {
-          // 오늘 아직 기록이 없으면 어제부터 이어서 확인
-        }
-        d.setDate(d.getDate() - 1);
-      }
-      return streak;
-    }
-
-    function renderStats(){
-      const usage = loadUsage();
-      const tKey = todayKey();
-      const wStart = weekStartKey();
-
-      const todayN = usage[tKey] || 0;
-      let weekN = 0, totalN = 0;
-      Object.keys(usage).forEach(k => {
-        const n = usage[k] || 0;
-        totalN += n;
-        if (k >= wStart) weekN += n;
-      });
-
-      const tEl = document.getElementById('countToday');
-      const wEl = document.getElementById('countWeek');
-      const totEl = document.getElementById('countTotal');
-      const sEl = document.getElementById('streakNote');
-      if (tEl) tEl.textContent = todayN + '회';
-      if (wEl) wEl.textContent = weekN + '회';
-      if (totEl) totEl.textContent = totalN + '회';
-
-      if (sEl){
-        const streak = calcStreak(usage);
-        if (streak >= 2){
-          sEl.textContent = streak + '일 연속 자세교정 중이에요';
-        } else if (totalN >= 1){
-          sEl.textContent = '꾸준히 이어가 보세요';
-        } else {
-          sEl.textContent = '';
-        }
-      }
-    }
-
-    let intervalMin = 40;
-    let remainingSec = intervalMin * 60;
-    let timerId = null;
-    let nextAlertAt = null; // 다음 알림 예정 시각(타임스탬프) — 백그라운드에서도 밀리지 않게
-    let running = false;
-    let paused = false;
-    let todayCount = 0;
-    let currentTip = null;
-
-    const el = {
-      grid: document.getElementById('intervalGrid'),
-      partGrid: document.getElementById('partGrid'),
-      modeGrid: document.getElementById('modeGrid'),
-      startBtn: document.getElementById('startBtn'),
-      pauseBtn: document.getElementById('pauseBtn'),
-      stopBtn: document.getElementById('stopBtn'),
-      countdown: document.getElementById('countdown'),
-      statusWord: document.getElementById('statusWord'),
-      countToday: document.getElementById('countToday'),
-      overlay: document.getElementById('overlay'),
-      overlayTitle: document.getElementById('overlayTitle'),
-      overlayText: document.getElementById('overlayText'),
-      dismissBtn: document.getElementById('dismissBtn'),
-      replayBtn: document.getElementById('replayBtn'),
-      endBtn: document.getElementById('endBtn')
-    };
-
-    el.partGrid.addEventListener('click', (e) => {
-      const btn = e.target.closest('.part-btn');
-      if (!btn || running) return;
-      document.querySelectorAll('.part-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedPart = btn.dataset.part;
-      saveSettings();
-    });
-
-    const shareWebBtnEl = document.getElementById('shareWebBtn');
-    const copyWebBtnEl = document.getElementById('copyWebBtn');
-    const shareAppBtnEl = document.getElementById('shareAppBtn');
-    const copyAppBtnEl = document.getElementById('copyAppBtn');
-    const shareToastEl = document.getElementById('shareToast');
-
-    const WEB_APP_URL = 'https://buly.kr/NmOYSw';
-    const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=kr.soonhwan.jaseSsam';
-    const SHARE_TITLE = '자세쌤 — 자세는 의지가 아니라 알림으로 고칩니다';
-    const WEB_SHARE_TEXT = '40분마다 음성으로 자세교정을 안내해주는 무료 웹앱이에요.';
-    const APP_SHARE_TEXT = '40분마다 음성으로 자세교정을 안내해주는 무료 앱이에요. 플레이스토어에서 받아보세요.';
-
-    function showToast(msg){
-      if (!shareToastEl) return;
-      shareToastEl.textContent = msg;
-      shareToastEl.classList.add('show');
-      setTimeout(() => shareToastEl.classList.remove('show'), 2000);
-    }
-
-    function copyLink(url){
-      if (navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(url)
-          .then(() => showToast('링크가 복사되었습니다'))
-          .catch(() => fallbackCopy(url));
+      const k = d.getFullYear() + '-' + m + '-' + day;
+      if (usage[k] > 0){
+        streak++;
+      } else if (i > 0){
+        break;
       } else {
-        fallbackCopy(url);
+        // 오늘 아직 기록이 없으면 어제부터 이어서 확인
       }
+      d.setDate(d.getDate() - 1);
     }
+    return streak;
+  }
 
-    function fallbackCopy(text){
-      let ok = false;
-      try {
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.opacity = '0';
-        document.body.appendChild(ta);
-        ta.focus();
-        ta.select();
-        ok = document.execCommand('copy'); // 성공 여부는 예외가 아니라 반환값으로 옴
-        document.body.removeChild(ta);
-      } catch(e) {
-        ok = false;
-      }
+  function renderStats(){
+    const usage = loadUsage();
+    const tKey = todayKey();
+    const wStart = weekStartKey();
 
-      if (ok){
-        showToast('링크가 복사되었습니다');
+    const todayN = usage[tKey] || 0;
+    let weekN = 0, totalN = 0;
+    Object.keys(usage).forEach(k => {
+      const n = usage[k] || 0;
+      totalN += n;
+      if (k >= wStart) weekN += n;
+    });
+
+    const tEl = document.getElementById('countToday');
+    const wEl = document.getElementById('countWeek');
+    const totEl = document.getElementById('countTotal');
+    const sEl = document.getElementById('streakNote');
+    if (tEl) tEl.textContent = todayN + '회';
+    if (wEl) wEl.textContent = weekN + '회';
+    if (totEl) totEl.textContent = totalN + '회';
+
+    if (sEl){
+      const streak = calcStreak(usage);
+      if (streak >= 2){
+        sEl.textContent = streak + '일 연속 자세교정 중이에요';
+      } else if (totalN >= 1){
+        sEl.textContent = '꾸준히 이어가 보세요';
       } else {
-        // 클립보드 권한이 막힌 환경(특히 iframe 내부)의 최종 수단: 직접 복사할 수 있게 보여줌
-        window.prompt('아래 주소를 복사해주세요', text);
+        sEl.textContent = '';
       }
     }
+  }
 
-    async function shareLink(url, text){
-      // 모바일에서는 시스템 공유 시트(카톡 등 포함)를 띄움
-      if (navigator.share){
-        try {
-          await navigator.share({ title: SHARE_TITLE, text: text, url: url });
-          return;
-        } catch(e) {
-          // 사용자가 취소한 경우(AbortError)는 조용히 종료, 그 외(iframe 권한 차단 등)는 복사로 대체
-          if (e && e.name === 'AbortError') return;
-        }
-      }
-      copyLink(url);
-    }
+  let intervalMin = 40;
+  let remainingSec = intervalMin * 60;
+  let timerId = null;
+  let nextAlertAt = null; // 다음 알림 예정 시각(타임스탬프) — 백그라운드에서도 밀리지 않게
+  let running = false;
+  let paused = false;
+  let todayCount = 0;
+  let currentTip = null;
 
-    if (shareWebBtnEl){
-      shareWebBtnEl.addEventListener('click', () => shareLink(WEB_APP_URL, WEB_SHARE_TEXT));
-    }
-    if (copyWebBtnEl){
-      copyWebBtnEl.addEventListener('click', () => copyLink(WEB_APP_URL));
-    }
-    if (shareAppBtnEl){
-      shareAppBtnEl.addEventListener('click', () => shareLink(PLAY_STORE_URL, APP_SHARE_TEXT));
-    }
-    if (copyAppBtnEl){
-      copyAppBtnEl.addEventListener('click', () => copyLink(PLAY_STORE_URL));
-    }
+  const el = {
+    grid: document.getElementById('intervalGrid'),
+    partGrid: document.getElementById('partGrid'),
+    modeGrid: document.getElementById('modeGrid'),
+    startBtn: document.getElementById('startBtn'),
+    pauseBtn: document.getElementById('pauseBtn'),
+    stopBtn: document.getElementById('stopBtn'),
+    countdown: document.getElementById('countdown'),
+    statusWord: document.getElementById('statusWord'),
+    countToday: document.getElementById('countToday'),
+    overlay: document.getElementById('overlay'),
+    overlayTitle: document.getElementById('overlayTitle'),
+    overlayText: document.getElementById('overlayText'),
+    dismissBtn: document.getElementById('dismissBtn'),
+    replayBtn: document.getElementById('replayBtn'),
+    endBtn: document.getElementById('endBtn')
+  };
 
-    const soundGridEl = document.getElementById('soundGrid');
-    if (soundGridEl){
-      soundGridEl.addEventListener('click', (e) => {
-        const btn = e.target.closest('.mode-btn');
-        if (!btn) return;
-        soundGridEl.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        soundEnabled = (btn.dataset.sound === 'on');
-        if (soundEnabled) playChime();
-        saveSettings();
-      });
-    }
+  el.partGrid.addEventListener('click', (e) => {
+    const btn = e.target.closest('.part-btn');
+    if (!btn || running) return;
+    document.querySelectorAll('.part-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedPart = btn.dataset.part;
+    selectedSub = 0;          // 부위가 바뀌면 세부항목은 첫 번째로
+    renderSubMenu();
+    saveSettings();
+  });
 
-    el.modeGrid.addEventListener('click', (e) => {
-      const btn = e.target.closest('.mode-btn');
+  /* ---------- 세부 증상(2단계) 메뉴 ---------- */
+  const subGridEl = document.getElementById('subGrid');
+  const subWrapEl = document.getElementById('subWrap');
+
+  function renderSubMenu(){
+    if (!subGridEl || !subWrapEl) return;
+    const list = PART_MENU[selectedPart] || [];
+    // 세부항목이 하나뿐이면 굳이 고를 게 없으므로 영역을 숨긴다
+    if (list.length <= 1){
+      subWrapEl.style.display = 'none';
+      subGridEl.innerHTML = '';
+      return;
+    }
+    subWrapEl.style.display = 'block';
+    subGridEl.innerHTML = '';
+    list.forEach((item, i) => {
+      const b = document.createElement('button');
+      b.className = 'sub-btn' + (i === selectedSub ? ' active' : '');
+      b.textContent = item.label;
+      b.dataset.sub = String(i);
+      if (running) b.disabled = true;
+      subGridEl.appendChild(b);
+    });
+  }
+
+  if (subGridEl){
+    subGridEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.sub-btn');
       if (!btn || running) return;
-      el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      selectedSub = parseInt(btn.dataset.sub, 10) || 0;
+      subGridEl.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      mode = btn.dataset.mode;
       saveSettings();
     });
+  }
 
-    el.grid.addEventListener('click', (e) => {
-      const btn = e.target.closest('.interval-btn');
-      if (!btn || running) return;
-      el.grid.querySelectorAll('.interval-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      intervalMin = parseInt(btn.dataset.min, 10);
-      remainingSec = intervalMin * 60;
-      saveSettings();
-    });
+  const shareWebBtnEl = document.getElementById('shareWebBtn');
+  const copyWebBtnEl = document.getElementById('copyWebBtn');
+  const shareAppBtnEl = document.getElementById('shareAppBtn');
+  const copyAppBtnEl = document.getElementById('copyAppBtn');
+  const shareToastEl = document.getElementById('shareToast');
 
-    function formatTime(sec){
-      const m = Math.floor(sec / 60).toString().padStart(2,'0');
-      const s = (sec % 60).toString().padStart(2,'0');
-      return m + ':' + s;
+  const WEB_APP_URL = 'https://buly.kr/NmOYSw';
+  const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=kr.soonhwan.jaseSsam';
+  const SHARE_TITLE = '자세쌤 — 자세는 의지가 아니라 알림으로 고칩니다';
+  const WEB_SHARE_TEXT = '40분마다 음성으로 자세교정을 안내해주는 무료 웹앱이에요.';
+  const APP_SHARE_TEXT = '40분마다 음성으로 자세교정을 안내해주는 무료 앱이에요. 플레이스토어에서 받아보세요.';
+
+  function showToast(msg){
+    if (!shareToastEl) return;
+    shareToastEl.textContent = msg;
+    shareToastEl.classList.add('show');
+    setTimeout(() => shareToastEl.classList.remove('show'), 2000);
+  }
+
+  function copyLink(url){
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url)
+        .then(() => showToast('링크가 복사되었습니다'))
+        .catch(() => fallbackCopy(url));
+    } else {
+      fallbackCopy(url);
+    }
+  }
+
+  function fallbackCopy(text){
+    let ok = false;
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      ok = document.execCommand('copy'); // 성공 여부는 예외가 아니라 반환값으로 옴
+      document.body.removeChild(ta);
+    } catch(e) {
+      ok = false;
     }
 
-    function updateCountdown(){
-      el.countdown.classList.remove('idle');
-      el.countdown.textContent = formatTime(remainingSec);
-      el.statusWord.textContent = '다음 안내까지';
-      el.statusWord.className = 'status-word aligned';
+    if (ok){
+      showToast('링크가 복사되었습니다');
+    } else {
+      // 클립보드 권한이 막힌 환경(특히 iframe 내부)의 최종 수단: 직접 복사할 수 있게 보여줌
+      window.prompt('아래 주소를 복사해주세요', text);
     }
+  }
 
-    function populateVoices(){
-      // 음성 선택 UI가 없으므로 목록을 화면에 반영할 필요가 없다.
-    }
-
-    /* ---------- 알림음 (Web Audio) ---------- */
-    let audioCtx = null;
-
-    function playChime(){
-      if (!soundEnabled) return;
+  async function shareLink(url, text){
+    // 모바일에서는 시스템 공유 시트(카톡 등 포함)를 띄움
+    if (navigator.share){
       try {
-        if (!audioCtx){
-          const AC = window.AudioContext || window.webkitAudioContext;
-          if (!AC) return;
-          audioCtx = new AC();
-        }
-        if (audioCtx.state === 'suspended') audioCtx.resume();
-
-        // 부드러운 2음 차임 (도-솔)
-        const now = audioCtx.currentTime;
-        [[880, 0], [1174.66, 0.18]].forEach(([freq, delay]) => {
-          const osc = audioCtx.createOscillator();
-          const gain = audioCtx.createGain();
-          osc.type = 'sine';
-          osc.frequency.value = freq;
-          gain.gain.setValueAtTime(0, now + delay);
-          gain.gain.linearRampToValueAtTime(0.25, now + delay + 0.02);
-          gain.gain.exponentialRampToValueAtTime(0.001, now + delay + 0.45);
-          osc.connect(gain);
-          gain.connect(audioCtx.destination);
-          osc.start(now + delay);
-          osc.stop(now + delay + 0.5);
-        });
-      } catch(e) { /* 오디오 미지원 환경은 무시 */ }
-    }
-
-    // "하나 둘" 무음 구간에 쓰는, 천천히 두 번 울리는 비프음 (숫자를 세는 듯한 느낌)
-    function playSlowDoubleBeep(){
-      if (!soundEnabled) return;
-      try {
-        if (!audioCtx){
-          const AC = window.AudioContext || window.webkitAudioContext;
-          if (!AC) return;
-          audioCtx = new AC();
-        }
-        if (audioCtx.state === 'suspended') audioCtx.resume();
-
-        const now = audioCtx.currentTime;
-        // 같은 음 높이로 천천히 두 번 (하나 / 둘) — 각 1초씩
-        [0, 1.2].forEach(delay => {
-          const osc = audioCtx.createOscillator();
-          const gain = audioCtx.createGain();
-          osc.type = 'sine';
-          osc.frequency.value = 660;
-          gain.gain.setValueAtTime(0, now + delay);
-          gain.gain.linearRampToValueAtTime(0.28, now + delay + 0.04);
-          gain.gain.setValueAtTime(0.28, now + delay + 0.85);
-          gain.gain.exponentialRampToValueAtTime(0.001, now + delay + 1.0);
-          osc.connect(gain);
-          gain.connect(audioCtx.destination);
-          osc.start(now + delay);
-          osc.stop(now + delay + 1.05);
-        });
-      } catch(e) { /* 오디오 미지원 환경은 무시 */ }
-    }
-
-    /* ---------- 화면 꺼짐 방지 (Wake Lock) ---------- */
-    async function requestWakeLock(){
-      try {
-        if ('wakeLock' in navigator){
-          wakeLock = await navigator.wakeLock.request('screen');
-          wakeLock.addEventListener('release', () => { wakeLock = null; });
-        }
-      } catch(e) { /* 미지원/거부 시 무시 */ }
-    }
-
-    function releaseWakeLock(){
-      try {
-        if (wakeLock){
-          wakeLock.release();
-          wakeLock = null;
-        }
-      } catch(e) {}
-    }
-
-    // 탭을 다시 활성화했을 때 wake lock 재요청
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible' && running && !paused && !wakeLock){
-        requestWakeLock();
-      }
-    });
-
-    function speak(text){
-      if (!('speechSynthesis' in window)) return;
-      window.speechSynthesis.cancel();
-      const utter = new SpeechSynthesisUtterance(text);
-      utter.lang = 'ko-KR';
-      utter.rate = speechRate;
-      const voices = window.speechSynthesis.getVoices();
-      const chosen = voices.find(v => v.lang === 'ko-KR');
-      if (chosen) utter.voice = chosen;
-      window.speechSynthesis.speak(utter);
-    }
-
-    /* ---------- 음성 자막 ---------- */
-    const captionCurrentEl = document.getElementById('captionCurrent');
-    const captionProgressEl = document.getElementById('captionProgress');
-    let captionCancelled = false;
-
-    function pickVoice(){
-      const voices = window.speechSynthesis.getVoices();
-      return voices.find(v => v.lang === 'ko-KR') || null;
-    }
-
-    // "등 기대고, 머리 기대고, ... 다시 시작." → 구절 배열
-    function splitPhrases(text){
-      return text
-        .split(/[,.]/)
-        .map(s => s.trim())
-        .filter(s => s.length > 0);
-    }
-
-    function renderCaptionDots(count, activeIdx){
-      if (!captionProgressEl) return;
-      if (captionProgressEl.childElementCount !== count){
-        captionProgressEl.innerHTML = '';
-        for (let i = 0; i < count; i++){
-          const dot = document.createElement('span');
-          dot.className = 'caption-dot';
-          captionProgressEl.appendChild(dot);
-        }
-      }
-      Array.from(captionProgressEl.children).forEach((dot, i) => {
-        dot.className = 'caption-dot' + (i < activeIdx ? ' done' : (i === activeIdx ? ' active' : ''));
-      });
-    }
-
-    function setCaption(text){
-      if (!captionCurrentEl) return;
-      captionCurrentEl.classList.add('fade');
-      setTimeout(() => {
-        captionCurrentEl.textContent = text;
-        captionCurrentEl.classList.remove('fade');
-      }, 120);
-    }
-
-    function stopCaptionedSpeech(){
-      captionCancelled = true;
-      currentUtterance = null;
-      clearTimeout(pendingSpeechTimer);
-      currentCaptionTimers.forEach(id => clearTimeout(id));
-      currentCaptionTimers = [];
-      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-    }
-
-    // 문장을 하나로 통째로 재생하면서, 자막은 예상 소요 시간에 맞춰 순서대로 진행시킴.
-    function speakWithCaptions(text){
-      const allPhrases = splitPhrases(text);
-      if (!allPhrases.length) return;
-
-      const SILENT_PHRASES = new Set(['하나 둘']);
-
-      captionCancelled = false;
-      currentCaptionTimers.forEach(id => clearTimeout(id));
-      currentCaptionTimers = [];
-
-      // 구절별 표시 시간을 글자 수로 추정해 순서대로 스케줄링
-      const msPerChar = 165 / Math.max(speechRate, 0.4);
-      const gapMs = 230 / Math.max(speechRate, 0.4);
-      // "하나 둘" 구간은 비프음 두 번(약 1.1초)이 끝날 시간을 확보해야 하므로 속도와 무관하게 고정
-      const BEEP_SLOT_MS = 2400;
-
-      let t = 0;
-      allPhrases.forEach((p, idx) => {
-        const isSilent = SILENT_PHRASES.has(p);
-        const id = setTimeout(() => {
-          if (captionCancelled) return;
-          renderCaptionDots(allPhrases.length, idx);
-          setCaption(p);
-          if (isSilent) playSlowDoubleBeep();
-        }, t);
-        currentCaptionTimers.push(id);
-        t += isSilent ? BEEP_SLOT_MS : (p.length * msPerChar + gapMs);
-      });
-      const doneId = setTimeout(() => {
-        if (captionCancelled) return;
-        renderCaptionDots(allPhrases.length, allPhrases.length);
-      }, t);
-      currentCaptionTimers.push(doneId);
-
-      if (!('speechSynthesis' in window)) return; // 음성 미지원 환경: 자막 스케줄만 진행
-
-      const spokenPhrases = allPhrases.filter(p => !SILENT_PHRASES.has(p));
-      if (!spokenPhrases.length) return; // 전부 무음 구절인 극단적인 경우
-
-      const spokenText = spokenPhrases.join(', ') + '.';
-
-      window.speechSynthesis.cancel();
-      const voice = pickVoice();
-
-      const utter = new SpeechSynthesisUtterance(spokenText);
-      utter.lang = 'ko-KR';
-      utter.rate = speechRate;
-      if (voice) utter.voice = voice;
-      currentUtterance = utter; // GC 방지용 참조 유지
-
-      window.speechSynthesis.speak(utter);
-    }
-
-    function notify(title, body){
-      if (!('Notification' in window) || Notification.permission !== 'granted') return;
-      try {
-        const n = new Notification(title, {
-          body: body,
-          icon: 'icon-192.png',
-          badge: 'favicon-32.png',
-          tag: 'jaseSsam-alert',   // 같은 태그면 이전 알림을 새 알림으로 교체 (중복 누적 방지)
-          renotify: true,
-          requireInteraction: true // 사용자가 직접 닫을 때까지 화면(특히 윈도우)에 유지
-        });
-        n.onclick = () => {
-          try { window.focus(); } catch(e) {}
-          n.close();
-        };
-      } catch(e) { /* 알림 생성 실패는 무시 (음성 안내는 별도로 진행됨) */ }
-    }
-
-    /* ---------- 팝업 알림 권한 상태 표시 ---------- */
-    const notifDotEl = document.getElementById('notifDot');
-    const notifTextEl = document.getElementById('notifText');
-    const notifBtnEl = document.getElementById('notifBtn');
-
-    function renderNotifStatus(){
-      if (!notifDotEl || !notifTextEl || !notifBtnEl) return;
-
-      if (!('Notification' in window)){
-        notifDotEl.className = 'notif-dot off';
-        notifTextEl.innerHTML = '이 브라우저는 팝업 알림을 지원하지 않습니다.';
-        notifBtnEl.style.display = 'none';
+        await navigator.share({ title: SHARE_TITLE, text: text, url: url });
         return;
-      }
-
-      const perm = Notification.permission;
-      if (perm === 'granted'){
-        notifDotEl.className = 'notif-dot on';
-        notifTextEl.innerHTML = '<b>팝업 알림 켜짐</b> — 탭이 백그라운드에 있어도 알려드려요.';
-        notifBtnEl.style.display = 'none';
-      } else if (perm === 'denied'){
-        notifDotEl.className = 'notif-dot off';
-        notifTextEl.innerHTML = '팝업 알림이 <b>차단</b>돼 있어요. 브라우저 주소창의 자물쇠 아이콘에서 알림을 허용해주세요.';
-        notifBtnEl.style.display = 'none';
-      } else {
-        notifDotEl.className = 'notif-dot';
-        notifTextEl.innerHTML = '팝업 알림을 켜면 다른 화면을 보고 있어도 알려드려요.';
-        notifBtnEl.style.display = 'inline-block';
+      } catch(e) {
+        // 사용자가 취소한 경우(AbortError)는 조용히 종료, 그 외(iframe 권한 차단 등)는 복사로 대체
+        if (e && e.name === 'AbortError') return;
       }
     }
+    copyLink(url);
+  }
 
-    if (notifBtnEl){
-      notifBtnEl.addEventListener('click', () => {
-        if (!('Notification' in window)) return;
-        notifBtnEl.disabled = true;
-        Notification.requestPermission().then(() => {
-          renderNotifStatus();
-          if (Notification.permission === 'granted'){
-            try {
-              const n = new Notification('자세쌤 알림이 켜졌어요', {
-                body: '이제 다른 화면을 보고 있어도 자세교정 시간을 알려드릴게요.',
-                icon: 'icon-192.png'
-              });
-              setTimeout(() => n.close(), 4000);
-            } catch(e) {}
-          }
-          notifBtnEl.disabled = false;
-        });
+  if (shareWebBtnEl){
+    shareWebBtnEl.addEventListener('click', () => shareLink(WEB_APP_URL, WEB_SHARE_TEXT));
+  }
+  if (copyWebBtnEl){
+    copyWebBtnEl.addEventListener('click', () => copyLink(WEB_APP_URL));
+  }
+  if (shareAppBtnEl){
+    shareAppBtnEl.addEventListener('click', () => shareLink(PLAY_STORE_URL, APP_SHARE_TEXT));
+  }
+  if (copyAppBtnEl){
+    copyAppBtnEl.addEventListener('click', () => copyLink(PLAY_STORE_URL));
+  }
+
+  const soundGridEl = document.getElementById('soundGrid');
+  if (soundGridEl){
+    soundGridEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.mode-btn');
+      if (!btn) return;
+      soundGridEl.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      soundEnabled = (btn.dataset.sound === 'on');
+      if (soundEnabled) playChime();
+      saveSettings();
+    });
+  }
+
+  el.modeGrid.addEventListener('click', (e) => {
+    const btn = e.target.closest('.mode-btn');
+    if (!btn || running) return;
+    el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    mode = btn.dataset.mode;
+    saveSettings();
+  });
+
+  el.grid.addEventListener('click', (e) => {
+    const btn = e.target.closest('.interval-btn');
+    if (!btn || running) return;
+    el.grid.querySelectorAll('.interval-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    intervalMin = parseInt(btn.dataset.min, 10);
+    remainingSec = intervalMin * 60;
+    saveSettings();
+  });
+
+  function formatTime(sec){
+    const m = Math.floor(sec / 60).toString().padStart(2,'0');
+    const s = (sec % 60).toString().padStart(2,'0');
+    return m + ':' + s;
+  }
+
+  function updateCountdown(){
+    el.countdown.classList.remove('idle');
+    el.countdown.textContent = formatTime(remainingSec);
+    el.statusWord.textContent = '다음 안내까지';
+    el.statusWord.className = 'status-word aligned';
+  }
+
+  function populateVoices(){
+    // 음성 선택 UI가 없으므로 목록을 화면에 반영할 필요가 없다.
+  }
+
+  /* ---------- 알림음 (Web Audio) ---------- */
+  let audioCtx = null;
+
+  function playChime(){
+    if (!soundEnabled) return;
+    try {
+      if (!audioCtx){
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return;
+        audioCtx = new AC();
+      }
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+
+      // 부드러운 2음 차임 (도-솔)
+      const now = audioCtx.currentTime;
+      [[880, 0], [1174.66, 0.18]].forEach(([freq, delay]) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0, now + delay);
+        gain.gain.linearRampToValueAtTime(0.25, now + delay + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + delay + 0.45);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now + delay);
+        osc.stop(now + delay + 0.5);
       });
+    } catch(e) { /* 오디오 미지원 환경은 무시 */ }
+  }
+
+  // "하나 둘" 무음 구간에 쓰는, 천천히 두 번 울리는 비프음 (숫자를 세는 듯한 느낌)
+  function playSlowDoubleBeep(){
+    if (!soundEnabled) return;
+    try {
+      if (!audioCtx){
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return;
+        audioCtx = new AC();
+      }
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+
+      const now = audioCtx.currentTime;
+      // 같은 음 높이로 천천히 두 번 (하나 / 둘) — 각 1초씩
+      [0, 1.2].forEach(delay => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = 660;
+        gain.gain.setValueAtTime(0, now + delay);
+        gain.gain.linearRampToValueAtTime(0.28, now + delay + 0.04);
+        gain.gain.setValueAtTime(0.28, now + delay + 0.85);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + delay + 1.0);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now + delay);
+        osc.stop(now + delay + 1.05);
+      });
+    } catch(e) { /* 오디오 미지원 환경은 무시 */ }
+  }
+
+  /* ---------- 화면 꺼짐 방지 (Wake Lock) ---------- */
+  async function requestWakeLock(){
+    try {
+      if ('wakeLock' in navigator){
+        wakeLock = await navigator.wakeLock.request('screen');
+        wakeLock.addEventListener('release', () => { wakeLock = null; });
+      }
+    } catch(e) { /* 미지원/거부 시 무시 */ }
+  }
+
+  function releaseWakeLock(){
+    try {
+      if (wakeLock){
+        wakeLock.release();
+        wakeLock = null;
+      }
+    } catch(e) {}
+  }
+
+  // 탭을 다시 활성화했을 때 wake lock 재요청
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && running && !paused && !wakeLock){
+      requestWakeLock();
+    }
+  });
+
+  function speak(text){
+    if (!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'ko-KR';
+    utter.rate = speechRate;
+    const voices = window.speechSynthesis.getVoices();
+    const chosen = voices.find(v => v.lang === 'ko-KR');
+    if (chosen) utter.voice = chosen;
+    window.speechSynthesis.speak(utter);
+  }
+
+  /* ---------- 음성 자막 ---------- */
+  const captionCurrentEl = document.getElementById('captionCurrent');
+  const captionProgressEl = document.getElementById('captionProgress');
+  let captionCancelled = false;
+
+  function pickVoice(){
+    const voices = window.speechSynthesis.getVoices();
+    return voices.find(v => v.lang === 'ko-KR') || null;
+  }
+
+  // "등 기대고, 머리 기대고, ... 다시 시작." → 구절 배열
+  function splitPhrases(text){
+    return text
+      .split(/[,.]/)
+      .map(s => s.trim())
+      .filter(s => s.length > 0);
+  }
+
+  function renderCaptionDots(count, activeIdx){
+    if (!captionProgressEl) return;
+    if (captionProgressEl.childElementCount !== count){
+      captionProgressEl.innerHTML = '';
+      for (let i = 0; i < count; i++){
+        const dot = document.createElement('span');
+        dot.className = 'caption-dot';
+        captionProgressEl.appendChild(dot);
+      }
+    }
+    Array.from(captionProgressEl.children).forEach((dot, i) => {
+      dot.className = 'caption-dot' + (i < activeIdx ? ' done' : (i === activeIdx ? ' active' : ''));
+    });
+  }
+
+  function setCaption(text){
+    if (!captionCurrentEl) return;
+    captionCurrentEl.classList.add('fade');
+    setTimeout(() => {
+      captionCurrentEl.textContent = text;
+      captionCurrentEl.classList.remove('fade');
+    }, 120);
+  }
+
+  function stopCaptionedSpeech(){
+    captionCancelled = true;
+    currentUtterance = null;
+    clearTimeout(pendingSpeechTimer);
+    currentCaptionTimers.forEach(id => clearTimeout(id));
+    currentCaptionTimers = [];
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  }
+
+  // 문장을 하나로 통째로 재생하면서, 자막은 예상 소요 시간에 맞춰 순서대로 진행시킴.
+  function speakWithCaptions(text){
+    const allPhrases = splitPhrases(text);
+    if (!allPhrases.length) return;
+
+    const SILENT_PHRASES = new Set(['하나 둘']);
+
+    captionCancelled = false;
+    currentCaptionTimers.forEach(id => clearTimeout(id));
+    currentCaptionTimers = [];
+
+    // 구절별 표시 시간을 글자 수로 추정해 순서대로 스케줄링
+    const msPerChar = 165 / Math.max(speechRate, 0.4);
+    const gapMs = 230 / Math.max(speechRate, 0.4);
+    // "하나 둘" 구간은 비프음 두 번(약 1.1초)이 끝날 시간을 확보해야 하므로 속도와 무관하게 고정
+    const BEEP_SLOT_MS = 2400;
+
+    let t = 0;
+    allPhrases.forEach((p, idx) => {
+      const isSilent = SILENT_PHRASES.has(p);
+      const id = setTimeout(() => {
+        if (captionCancelled) return;
+        renderCaptionDots(allPhrases.length, idx);
+        setCaption(p);
+        if (isSilent) playSlowDoubleBeep();
+      }, t);
+      currentCaptionTimers.push(id);
+      t += isSilent ? BEEP_SLOT_MS : (p.length * msPerChar + gapMs);
+    });
+    const doneId = setTimeout(() => {
+      if (captionCancelled) return;
+      renderCaptionDots(allPhrases.length, allPhrases.length);
+    }, t);
+    currentCaptionTimers.push(doneId);
+
+    if (!('speechSynthesis' in window)) return; // 음성 미지원 환경: 자막 스케줄만 진행
+
+    const spokenPhrases = allPhrases.filter(p => !SILENT_PHRASES.has(p));
+    if (!spokenPhrases.length) return; // 전부 무음 구절인 극단적인 경우
+
+    const spokenText = spokenPhrases.join(', ') + '.';
+
+    window.speechSynthesis.cancel();
+    const voice = pickVoice();
+
+    const utter = new SpeechSynthesisUtterance(spokenText);
+    utter.lang = 'ko-KR';
+    utter.rate = speechRate;
+    if (voice) utter.voice = voice;
+    currentUtterance = utter; // GC 방지용 참조 유지
+
+    window.speechSynthesis.speak(utter);
+  }
+
+  function notify(title, body){
+    if (!('Notification' in window) || Notification.permission !== 'granted') return;
+    try {
+      const n = new Notification(title, {
+        body: body,
+        icon: 'icon-192.png',
+        badge: 'favicon-32.png',
+        tag: 'jaseSsam-alert',   // 같은 태그면 이전 알림을 새 알림으로 교체 (중복 누적 방지)
+        renotify: true,
+        requireInteraction: true // 사용자가 직접 닫을 때까지 화면(특히 윈도우)에 유지
+      });
+      n.onclick = () => {
+        try { window.focus(); } catch(e) {}
+        n.close();
+      };
+    } catch(e) { /* 알림 생성 실패는 무시 (음성 안내는 별도로 진행됨) */ }
+  }
+
+  /* ---------- 팝업 알림 권한 상태 표시 ---------- */
+  const notifDotEl = document.getElementById('notifDot');
+  const notifTextEl = document.getElementById('notifText');
+  const notifBtnEl = document.getElementById('notifBtn');
+
+  function renderNotifStatus(){
+    if (!notifDotEl || !notifTextEl || !notifBtnEl) return;
+
+    if (!('Notification' in window)){
+      notifDotEl.className = 'notif-dot off';
+      notifTextEl.innerHTML = '이 브라우저는 팝업 알림을 지원하지 않습니다.';
+      notifBtnEl.style.display = 'none';
+      return;
     }
 
-    renderNotifStatus();
+    const perm = Notification.permission;
+    if (perm === 'granted'){
+      notifDotEl.className = 'notif-dot on';
+      notifTextEl.innerHTML = '<b>팝업 알림 켜짐</b> — 탭이 백그라운드에 있어도 알려드려요.';
+      notifBtnEl.style.display = 'none';
+    } else if (perm === 'denied'){
+      notifDotEl.className = 'notif-dot off';
+      notifTextEl.innerHTML = '팝업 알림이 <b>차단</b>돼 있어요. 브라우저 주소창의 자물쇠 아이콘에서 알림을 허용해주세요.';
+      notifBtnEl.style.display = 'none';
+    } else {
+      notifDotEl.className = 'notif-dot';
+      notifTextEl.innerHTML = '팝업 알림을 켜면 다른 화면을 보고 있어도 알려드려요.';
+      notifBtnEl.style.display = 'inline-block';
+    }
+  }
 
-    function showAlertOverlay(tip, opts){
-      opts = opts || {};
+  if (notifBtnEl){
+    notifBtnEl.addEventListener('click', () => {
+      if (!('Notification' in window)) return;
+      notifBtnEl.disabled = true;
+      Notification.requestPermission().then(() => {
+        renderNotifStatus();
+        if (Notification.permission === 'granted'){
+          try {
+            const n = new Notification('자세쌤 알림이 켜졌어요', {
+              body: '이제 다른 화면을 보고 있어도 자세교정 시간을 알려드릴게요.',
+              icon: 'icon-192.png'
+            });
+            setTimeout(() => n.close(), 4000);
+          } catch(e) {}
+        }
+        notifBtnEl.disabled = false;
+      });
+    });
+  }
+
+  renderNotifStatus();
+
+  function showAlertOverlay(tip, opts){
+    opts = opts || {};
+    currentTip = tip;
+    el.overlayTitle.textContent = tip.title;
+    el.overlayText.textContent = tip.text;
+    el.overlay.classList.add('show');
+    if (captionCurrentEl) captionCurrentEl.textContent = '준비 중…';
+    renderCaptionDots(splitPhrases(tip.text).length, -1);
+    playChime();
+    // 알림음이 끝난 뒤 자막과 함께 음성 안내 시작 (취소 가능하도록 id 보관)
+    clearTimeout(pendingSpeechTimer);
+    pendingSpeechTimer = setTimeout(() => speakWithCaptions(tip.text), 750);
+    if (!opts.isTest){
+      notify('자세교정 알림 — ' + tip.title, tip.text);
+      todayCount += 1;
+      recordUsage();
+    }
+    el.statusWord.textContent = opts.isTest ? '테스트 재생 중' : '안내 중';
+    el.statusWord.className = 'status-word drift';
+  }
+
+  function triggerAlert(){
+    // 네이티브 앱에서는 안드로이드가 알람/음성을 담당하므로 웹은 관여하지 않는다
+    if (typeof IS_NATIVE !== 'undefined' && IS_NATIVE) return;
+    const item = getMenuItem(selectedPart, selectedSub);
+    const tip = { title: item.title, text: item[mode] };
+    showAlertOverlay(tip, { isTest: false });
+  }
+
+  function testAlert(){
+    // 사용자가 지금 선택한 부위/세부항목/자세 기준으로, 통계에는 반영하지 않고 미리 확인
+    const item = getMenuItem(selectedPart, selectedSub);
+    const tip = { title: item.title, text: item[mode] };
+
+    // 앱(웹뷰) 안에서는 웹 음성 합성이 동작하지 않는 경우가 많아,
+    // 실제 알림과 동일하게 안드로이드 TTS로 재생하고 화면에는 자막만 진행시킨다.
+    if (typeof IS_NATIVE !== 'undefined' && IS_NATIVE){
       currentTip = tip;
       el.overlayTitle.textContent = tip.title;
       el.overlayText.textContent = tip.text;
       el.overlay.classList.add('show');
       if (captionCurrentEl) captionCurrentEl.textContent = '준비 중…';
       renderCaptionDots(splitPhrases(tip.text).length, -1);
-      playChime();
-      // 알림음이 끝난 뒤 자막과 함께 음성 안내 시작 (취소 가능하도록 id 보관)
-      clearTimeout(pendingSpeechTimer);
-      pendingSpeechTimer = setTimeout(() => speakWithCaptions(tip.text), 750);
-      if (!opts.isTest){
-        notify('자세교정 알림 — ' + tip.title, tip.text);
-        todayCount += 1;
-        recordUsage();
-      }
-      el.statusWord.textContent = opts.isTest ? '테스트 재생 중' : '안내 중';
+      el.statusWord.textContent = '테스트 재생 중';
       el.statusWord.className = 'status-word drift';
+      try { AndroidBridge.testCue(selectedPart, mode); } catch(e) {}
+      return;
     }
 
-    function triggerAlert(){
-      // 네이티브 앱에서는 안드로이드가 알람/음성을 담당하므로 웹은 관여하지 않는다
-      if (typeof IS_NATIVE !== 'undefined' && IS_NATIVE) return;
-      const bucket = (TIP_LIBRARY[selectedPart] && TIP_LIBRARY[selectedPart][mode]) || TIP_LIBRARY['전신'][mode];
-      const tip = bucket[Math.floor(Math.random() * bucket.length)];
-      showAlertOverlay(tip, { isTest: false });
-    }
-
-    function testAlert(){
-      // 사용자가 지금 선택한 부위/자세 기준으로, 통계에는 반영하지 않고 미리 확인
-      const bucket = (TIP_LIBRARY[selectedPart] && TIP_LIBRARY[selectedPart][mode]) || TIP_LIBRARY['전신'][mode];
-      const tip = bucket[Math.floor(Math.random() * bucket.length)];
-
-      // 앱(웹뷰) 안에서는 웹 음성 합성이 동작하지 않는 경우가 많아,
-      // 실제 알림과 동일하게 안드로이드 TTS로 재생하고 화면에는 자막만 진행시킨다.
-      if (typeof IS_NATIVE !== 'undefined' && IS_NATIVE){
-        currentTip = tip;
-        el.overlayTitle.textContent = tip.title;
-        el.overlayText.textContent = tip.text;
-        el.overlay.classList.add('show');
-        if (captionCurrentEl) captionCurrentEl.textContent = '준비 중…';
-        renderCaptionDots(splitPhrases(tip.text).length, -1);
-        el.statusWord.textContent = '테스트 재생 중';
-        el.statusWord.className = 'status-word drift';
-        try { AndroidBridge.testCue(selectedPart, mode); } catch(e) {}
-        return;
+    // 오디오 컨텍스트를 사용자 클릭 시점에 활성화 (모바일 자동재생 정책 대응)
+    try {
+      if (!audioCtx){
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (AC) audioCtx = new AC();
       }
+      if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+    } catch(e) {}
+    showAlertOverlay(tip, { isTest: true });
+  }
 
-      // 오디오 컨텍스트를 사용자 클릭 시점에 활성화 (모바일 자동재생 정책 대응)
-      try {
-        if (!audioCtx){
-          const AC = window.AudioContext || window.webkitAudioContext;
-          if (AC) audioCtx = new AC();
-        }
-        if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
-      } catch(e) {}
-      showAlertOverlay(tip, { isTest: true });
+  const fullTestBtnEl = document.getElementById('fullTestBtn');
+  if (fullTestBtnEl){
+    fullTestBtnEl.addEventListener('click', testAlert);
+  }
+
+  el.dismissBtn.addEventListener('click', () => {
+    el.overlay.classList.remove('show');
+    stopCaptionedSpeech();
+    remainingSec = intervalMin * 60;
+    if (running && !paused){
+      nextAlertAt = Date.now() + intervalMin * 60 * 1000;
+      updateCountdown();
     }
-
-    const fullTestBtnEl = document.getElementById('fullTestBtn');
-    if (fullTestBtnEl){
-      fullTestBtnEl.addEventListener('click', testAlert);
-    }
-
-    el.dismissBtn.addEventListener('click', () => {
-      el.overlay.classList.remove('show');
-      stopCaptionedSpeech();
-      remainingSec = intervalMin * 60;
-      if (running && !paused){
-        nextAlertAt = Date.now() + intervalMin * 60 * 1000;
-        updateCountdown();
+    // 앱(네이티브) 안에서는 안내를 다 본 뒤 전면광고를 한 번 보여준다
+    try {
+      if (typeof AndroidBridge !== 'undefined' && AndroidBridge && AndroidBridge.isNative && AndroidBridge.isNative()){
+        AndroidBridge.showInterstitialAd();
       }
-      // 앱(네이티브) 안에서는 안내를 다 본 뒤 전면광고를 한 번 보여준다
-      try {
-        if (typeof AndroidBridge !== 'undefined' && AndroidBridge && AndroidBridge.isNative && AndroidBridge.isNative()){
-          AndroidBridge.showInterstitialAd();
-        }
-      } catch(e) {}
-    });
+    } catch(e) {}
+  });
 
-    el.replayBtn.addEventListener('click', () => {
-      if (!currentTip) return;
-      // 앱(웹뷰) 안에서는 웹 음성 합성이 동작하지 않으므로 안드로이드 TTS로 다시 재생
-      const bridgeAvailable = (typeof AndroidBridge !== 'undefined' && AndroidBridge && AndroidBridge.isNative && AndroidBridge.isNative());
-      if (bridgeAvailable){
-        if (captionCurrentEl) captionCurrentEl.textContent = '준비 중…';
-        renderCaptionDots(splitPhrases(currentTip.text).length, -1);
-        try { AndroidBridge.replayCue(selectedPart, mode); } catch(e) {}
-        return;
-      }
-      speakWithCaptions(currentTip.text);
-    });
-
-    el.endBtn.addEventListener('click', () => {
-      el.overlay.classList.remove('show');
-      stopCaptionedSpeech();
-      // 정지 버튼과 동일한 로직(반복 알림 종료, 네이티브 알람 취소 등)을 그대로 재사용
-      if (running && !el.stopBtn.disabled) el.stopBtn.click();
-    });
-
-    // 남은 시간을 "예정 시각 - 현재 시각"으로 계산한다.
-    function syncRemaining(){
-      if (nextAlertAt == null) return;
-      remainingSec = Math.max(0, Math.round((nextAlertAt - Date.now()) / 1000));
+  el.replayBtn.addEventListener('click', () => {
+    if (!currentTip) return;
+    // 앱(웹뷰) 안에서는 웹 음성 합성이 동작하지 않으므로 안드로이드 TTS로 다시 재생
+    const bridgeAvailable = (typeof AndroidBridge !== 'undefined' && AndroidBridge && AndroidBridge.isNative && AndroidBridge.isNative());
+    if (bridgeAvailable){
+      if (captionCurrentEl) captionCurrentEl.textContent = '준비 중…';
+      renderCaptionDots(splitPhrases(currentTip.text).length, -1);
+      try { AndroidBridge.replayCue(selectedPart, mode); } catch(e) {}
+      return;
     }
+    speakWithCaptions(currentTip.text);
+  });
 
-    function tick(){
-      if (nextAlertAt == null) return;
+  el.endBtn.addEventListener('click', () => {
+    el.overlay.classList.remove('show');
+    stopCaptionedSpeech();
+    // 정지 버튼과 동일한 로직(반복 알림 종료, 네이티브 알람 취소 등)을 그대로 재사용
+    if (running && !el.stopBtn.disabled) el.stopBtn.click();
+  });
+
+  // 남은 시간을 "예정 시각 - 현재 시각"으로 계산한다.
+  function syncRemaining(){
+    if (nextAlertAt == null) return;
+    remainingSec = Math.max(0, Math.round((nextAlertAt - Date.now()) / 1000));
+  }
+
+  function tick(){
+    if (nextAlertAt == null) return;
+    syncRemaining();
+    updateCountdown();
+    if (Date.now() >= nextAlertAt){
+      triggerAlert();
+      // 밀린 시간이 아무리 길어도 다음 알림은 지금부터 한 주기 뒤로 재설정
+      nextAlertAt = Date.now() + intervalMin * 60 * 1000;
       syncRemaining();
       updateCountdown();
-      if (Date.now() >= nextAlertAt){
-        triggerAlert();
-        // 밀린 시간이 아무리 길어도 다음 알림은 지금부터 한 주기 뒤로 재설정
+    }
+  }
+
+  // 화면이 다시 보이거나 창에 포커스가 돌아오면 즉시 시간 재동기화
+  function resyncTimer(){
+    if (!running || paused || nextAlertAt == null) return;
+    if (Date.now() >= nextAlertAt){
+      tick(); // 자리를 비운 사이 시각이 지났으면 바로 안내
+    } else {
+      syncRemaining();
+      updateCountdown();
+    }
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') resyncTimer();
+  });
+  window.addEventListener('focus', resyncTimer);
+  window.addEventListener('pageshow', resyncTimer);
+
+  el.startBtn.addEventListener('click', () => {
+    if (running) return;
+    if ('Notification' in window && Notification.permission === 'default'){
+      Notification.requestPermission().then(() => renderNotifStatus());
+    }
+    if ('speechSynthesis' in window){
+      window.speechSynthesis.getVoices();
+    }
+    running = true;
+    paused = false;
+    el.startBtn.disabled = true;
+    el.pauseBtn.disabled = false;
+    el.pauseBtn.textContent = '일시정지';
+    el.stopBtn.disabled = false;
+    el.grid.querySelectorAll('.interval-btn').forEach(b => b.disabled = true);
+    el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.disabled = true);
+    document.querySelectorAll('.part-btn').forEach(b => b.disabled = true);
+    document.querySelectorAll('.sub-btn').forEach(b => b.disabled = true);
+    if (fullTestBtnEl) fullTestBtnEl.disabled = true;
+    remainingSec = intervalMin * 60;
+    nextAlertAt = Date.now() + intervalMin * 60 * 1000;
+    updateCountdown();
+    timerId = setInterval(tick, 1000);
+    nativeStart();
+    // 사용자 조작 시점에 오디오 활성화 (모바일 자동재생 정책 대응)
+    try {
+      if (!audioCtx){
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (AC) audioCtx = new AC();
+      }
+      if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+    } catch(e) {}
+    requestWakeLock();
+  });
+
+  el.pauseBtn.addEventListener('click', () => {
+    if (!running) return;
+    if (!paused){
+      paused = true;
+      clearInterval(timerId);
+      syncRemaining();       // 멈춘 시점의 남은 시간을 확정
+      nextAlertAt = null;
+      nativeStop();
+      el.pauseBtn.textContent = '재개';
+      el.statusWord.textContent = '일시정지됨';
+      el.statusWord.className = 'status-word drift';
+      releaseWakeLock();
+    } else {
+      paused = false;
+      nextAlertAt = Date.now() + remainingSec * 1000; // 남은 시간만큼 다시 예약
+      timerId = setInterval(tick, 1000);
+      nativeRescheduleIn(remainingSec);
+      el.pauseBtn.textContent = '일시정지';
+      el.statusWord.textContent = '다음 안내까지';
+      el.statusWord.className = 'status-word aligned';
+      requestWakeLock();
+    }
+  });
+
+  /** 화면을 "정지" 상태로 되돌린다. native=true면 안드로이드 쪽에는 다시 정지 요청을 보내지 않는다
+      (이미 안드로이드 쪽에서 꺼진 뒤 이 함수가 호출되는 경우라 다시 보내면 무한루프가 됨). */
+  function resetToStoppedUi(native){
+    running = false;
+    paused = false;
+    clearInterval(timerId);
+    el.startBtn.disabled = false;
+    el.pauseBtn.disabled = true;
+    el.pauseBtn.textContent = '일시정지';
+    el.stopBtn.disabled = true;
+    el.grid.querySelectorAll('.interval-btn').forEach(b => b.disabled = false);
+    el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.disabled = false);
+    document.querySelectorAll('.part-btn').forEach(b => b.disabled = false);
+    document.querySelectorAll('.sub-btn').forEach(b => b.disabled = false);
+    if (fullTestBtnEl) fullTestBtnEl.disabled = false;
+    remainingSec = intervalMin * 60;
+    nextAlertAt = null;
+    if (!native) nativeStop();
+    el.statusWord.textContent = '정렬 대기';
+    el.statusWord.className = 'status-word aligned';
+    el.countdown.classList.add('idle');
+    el.countdown.textContent = '간격을 선택하고 시작하세요';
+    releaseWakeLock();
+  }
+
+  el.stopBtn.addEventListener('click', () => {
+    resetToStoppedUi(false);
+  });
+
+  /* 알림의 "종료" 버튼 등, 화면 밖에서 알람이 꺼졌을 때 안드로이드가 호출한다.
+     이미 꺼진 뒤 통보받는 것이므로 다시 정지 요청을 보내지 않고 화면만 맞춘다. */
+  window.__nativeStopped = function(){
+    try {
+      if (!running) return; // 이미 정지 상태면 할 일 없음 (무한루프 방지용 안전장치이기도 함)
+      resetToStoppedUi(true);
+    } catch(e) {}
+  };
+
+  /* ---------- 저장된 설정 복원 ---------- */
+  (function restoreSettings(){
+    const s = loadSettings();
+    if (!s) return;
+
+    // 부위
+    if (s.part){
+      const partBtn = el.partGrid.querySelector('.part-btn[data-part="' + s.part + '"]');
+      if (partBtn){
+        el.partGrid.querySelectorAll('.part-btn').forEach(b => b.classList.remove('active'));
+        partBtn.classList.add('active');
+        selectedPart = s.part;
+      }
+    }
+
+    // 세부 증상 (저장된 인덱스가 현재 부위의 항목 수를 넘지 않도록 보정)
+    if (typeof s.sub === 'number'){
+      const list = PART_MENU[selectedPart] || [];
+      selectedSub = Math.max(0, Math.min(s.sub, list.length - 1));
+    }
+
+    // 자세 모드
+    if (s.mode){
+      const modeBtn = el.modeGrid.querySelector('.mode-btn[data-mode="' + s.mode + '"]');
+      if (modeBtn){
+        el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        modeBtn.classList.add('active');
+        mode = s.mode;
+      }
+    }
+
+    // 알림 간격
+    if (s.interval){
+      const intBtn = el.grid.querySelector('.interval-btn[data-min="' + s.interval + '"]');
+      if (intBtn){
+        el.grid.querySelectorAll('.interval-btn').forEach(b => b.classList.remove('active'));
+        intBtn.classList.add('active');
+        intervalMin = s.interval;
+        remainingSec = intervalMin * 60;
+      }
+    }
+
+    // 알림음
+    if (typeof s.sound === 'boolean' && soundGridEl){
+      soundEnabled = s.sound;
+      soundGridEl.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      const sndBtn = soundGridEl.querySelector('.mode-btn[data-sound="' + (s.sound ? 'on' : 'off') + '"]');
+      if (sndBtn) sndBtn.classList.add('active');
+    }
+  })();
+
+  /* ---------- 세부 증상 메뉴 최초 렌더링 ---------- */
+  renderSubMenu();
+
+  /* ---------- 누적 사용 기록 표시 ---------- */
+  renderStats();
+
+  /* ---------- 이용 안내 아코디언 ---------- */
+  const infoAccordionEl = document.getElementById('infoAccordion');
+  const infoToggleEl = document.getElementById('infoToggle');
+  if (infoAccordionEl && infoToggleEl){
+    infoToggleEl.addEventListener('click', () => {
+      const willOpen = !infoAccordionEl.classList.contains('open');
+      infoAccordionEl.classList.toggle('open', willOpen);
+      infoToggleEl.setAttribute('aria-expanded', String(willOpen));
+    });
+  }
+
+
+  /* ============================================================
+     네이티브(안드로이드) 연동
+     ============================================================ */
+
+  function nativeStart(){
+    if (!IS_NATIVE) return;
+    try {
+      AndroidBridge.startAlarm(selectedPart, mode, intervalMin, speechRate, soundEnabled);
+    } catch(e) {}
+  }
+  function nativeStop(){
+    if (!IS_NATIVE) return;
+    try { AndroidBridge.stopAlarm(); } catch(e) {}
+  }
+  function nativeRescheduleIn(seconds){
+    if (!IS_NATIVE) return;
+    try { AndroidBridge.rescheduleIn(seconds); } catch(e) {}
+  }
+
+  window.__nativeAlert = function(payload){
+    try {
+      const tip = { title: payload.title, text: payload.text };
+      currentTip = tip;
+      el.overlayTitle.textContent = tip.title;
+      el.overlayText.textContent = tip.text;
+      el.overlay.classList.add('show');
+      if (captionCurrentEl) captionCurrentEl.textContent = '준비 중…';
+      renderCaptionDots(splitPhrases(tip.text).length, -1);
+
+      if (payload.isTest){
+        el.statusWord.textContent = '테스트 재생 중';
+        el.statusWord.className = 'status-word drift';
+        return;
+      }
+
+      todayCount += 1;
+      renderStats();
+      el.statusWord.textContent = '안내 중';
+      el.statusWord.className = 'status-word drift';
+      if (running && !paused){
         nextAlertAt = Date.now() + intervalMin * 60 * 1000;
         syncRemaining();
         updateCountdown();
       }
-    }
+    } catch(e) {}
+  };
 
-    // 화면이 다시 보이거나 창에 포커스가 돌아오면 즉시 시간 재동기화
-    function resyncTimer(){
-      if (!running || paused || nextAlertAt == null) return;
-      if (Date.now() >= nextAlertAt){
-        tick(); // 자리를 비운 사이 시각이 지났으면 바로 안내
-      } else {
+  window.__nativePhrase = function(payload){
+    try {
+      const idx = payload.index;
+      const total = payload.total;
+      renderCaptionDots(total, idx);
+      if (idx < total && payload.text){
+        setCaption(payload.text);
+      }
+    } catch(e) {}
+  };
+
+  function showCaptionsOnly(text){
+    const allPhrases = splitPhrases(text);
+    if (!allPhrases.length) return;
+    captionCancelled = false;
+    currentCaptionTimers.forEach(id => clearTimeout(id));
+    currentCaptionTimers = [];
+    const msPerChar = 165 / Math.max(speechRate, 0.4);
+    const gapMs = 230 / Math.max(speechRate, 0.4);
+    const BEEP_SLOT_MS = 2400;
+    let t = 0;
+    allPhrases.forEach((p, idx) => {
+      const isSilent = (p === '하나 둘');
+      const id = setTimeout(() => {
+        if (captionCancelled) return;
+        renderCaptionDots(allPhrases.length, idx);
+        setCaption(p);
+      }, t);
+      currentCaptionTimers.push(id);
+      t += isSilent ? BEEP_SLOT_MS : (p.length * msPerChar + gapMs);
+    });
+    const doneId = setTimeout(() => {
+      if (captionCancelled) return;
+      renderCaptionDots(allPhrases.length, allPhrases.length);
+    }, t);
+    currentCaptionTimers.push(doneId);
+  }
+
+  function nativeResync(){
+    if (!IS_NATIVE) return;
+    renderStats();
+    try {
+      if (!AndroidBridge.isRunning()) return;
+      const at = parseInt(AndroidBridge.getNextAlertAt(), 10);
+      if (at > 0){
+        nextAlertAt = at;
         syncRemaining();
         updateCountdown();
       }
-    }
+    } catch(e) {}
+  }
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') nativeResync();
+  });
+  window.addEventListener('focus', nativeResync);
 
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') resyncTimer();
-    });
-    window.addEventListener('focus', resyncTimer);
-    window.addEventListener('pageshow', resyncTimer);
+  if (IS_NATIVE){
+    document.addEventListener('DOMContentLoaded', applyNativeCopy);
+    applyNativeCopy();
+    restoreNativeRunningState();
+  }
 
-    el.startBtn.addEventListener('click', () => {
-      if (running) return;
-      if ('Notification' in window && Notification.permission === 'default'){
-        Notification.requestPermission().then(() => renderNotifStatus());
-      }
-      if ('speechSynthesis' in window){
-        window.speechSynthesis.getVoices();
-      }
+  /**
+   * 앱이 다시 열릴 때(스와이프 종료 후 재실행, 재부팅 후 등) 화면의 시작/정지 상태는
+   * 항상 "정지됨"으로 초기화되지만, 실제로는 안드로이드가 백그라운드에서 계속
+   * 알람을 진행 중일 수 있다. 그 경우 화면이 실제 상태를 반영하지 못해
+   * "정지 버튼이 비활성화된 채로 알람만 계속 울리는" 것처럼 보이는 문제가 있었다.
+   * 여기서 네이티브의 실제 상태를 확인해 화면을 정확히 맞춘다.
+   */
+  function restoreNativeRunningState(){
+    try {
+      if (!AndroidBridge.isRunning()) return; // 실제로도 정지 상태면 화면 그대로 둠(정상)
+
       running = true;
       paused = false;
       el.startBtn.disabled = true;
@@ -1877,303 +2219,37 @@
       el.grid.querySelectorAll('.interval-btn').forEach(b => b.disabled = true);
       el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.disabled = true);
       document.querySelectorAll('.part-btn').forEach(b => b.disabled = true);
+      document.querySelectorAll('.sub-btn').forEach(b => b.disabled = true);
       if (fullTestBtnEl) fullTestBtnEl.disabled = true;
-      remainingSec = intervalMin * 60;
-      nextAlertAt = Date.now() + intervalMin * 60 * 1000;
-      updateCountdown();
-      timerId = setInterval(tick, 1000);
-      nativeStart();
-      // 사용자 조작 시점에 오디오 활성화 (모바일 자동재생 정책 대응)
-      try {
-        if (!audioCtx){
-          const AC = window.AudioContext || window.webkitAudioContext;
-          if (AC) audioCtx = new AC();
-        }
-        if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
-      } catch(e) {}
-      requestWakeLock();
-    });
 
-    el.pauseBtn.addEventListener('click', () => {
-      if (!running) return;
-      if (!paused){
-        paused = true;
-        clearInterval(timerId);
-        syncRemaining();       // 멈춘 시점의 남은 시간을 확정
-        nextAlertAt = null;
-        nativeStop();
-        el.pauseBtn.textContent = '재개';
-        el.statusWord.textContent = '일시정지됨';
-        el.statusWord.className = 'status-word drift';
-        releaseWakeLock();
-      } else {
-        paused = false;
-        nextAlertAt = Date.now() + remainingSec * 1000; // 남은 시간만큼 다시 예약
-        timerId = setInterval(tick, 1000);
-        nativeRescheduleIn(remainingSec);
-        el.pauseBtn.textContent = '일시정지';
-        el.statusWord.textContent = '다음 안내까지';
-        el.statusWord.className = 'status-word aligned';
-        requestWakeLock();
+      const at = parseInt(AndroidBridge.getNextAlertAt(), 10);
+      if (at > 0){
+        nextAlertAt = at;
+        syncRemaining();
+        updateCountdown();
       }
-    });
-
-    /** 화면을 "정지" 상태로 되돌린다. native=true면 안드로이드 쪽에는 다시 정지 요청을 보내지 않는다
-        (이미 안드로이드 쪽에서 꺼진 뒤 이 함수가 호출되는 경우라 다시 보내면 무한루프가 됨). */
-    function resetToStoppedUi(native){
-      running = false;
-      paused = false;
       clearInterval(timerId);
-      el.startBtn.disabled = false;
-      el.pauseBtn.disabled = true;
-      el.pauseBtn.textContent = '일시정지';
-      el.stopBtn.disabled = true;
-      el.grid.querySelectorAll('.interval-btn').forEach(b => b.disabled = false);
-      el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.disabled = false);
-      document.querySelectorAll('.part-btn').forEach(b => b.disabled = false);
-      if (fullTestBtnEl) fullTestBtnEl.disabled = false;
-      remainingSec = intervalMin * 60;
-      nextAlertAt = null;
-      if (!native) nativeStop();
-      el.statusWord.textContent = '정렬 대기';
-      el.statusWord.className = 'status-word aligned';
-      el.countdown.classList.add('idle');
-      el.countdown.textContent = '간격을 선택하고 시작하세요';
-      releaseWakeLock();
+      timerId = setInterval(tick, 1000);
+      requestWakeLock();
+    } catch(e) {}
+  }
+  function applyNativeCopy(){
+    const note = document.querySelector('.info-item');
+    if (note) {
+      note.innerHTML = '<b>안내</b> — 화면을 꺼두거나 다른 앱을 사용 중이어도 정해진 시각에 알려드립니다. 알림이 오지 않으면 휴대폰 설정에서 자세쌤의 알림과 배터리 최적화 예외를 허용해 주세요.';
     }
+    const notifCard = document.querySelector('.notif-row');
+    if (notifCard) notifCard.style.display = 'none';
+  }
 
-    el.stopBtn.addEventListener('click', () => {
-      resetToStoppedUi(false);
+  /* ---------- 서비스워커 등록 (PWA 설치/오프라인) ---------- */
+  if ('serviceWorker' in navigator && !(typeof IS_NATIVE !== 'undefined' && IS_NATIVE)){
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {
+        /* 등록 실패해도 앱 동작에는 영향 없음 */
+      });
     });
-
-    /* 알림의 "종료" 버튼 등, 화면 밖에서 알람이 꺼졌을 때 안드로이드가 호출한다.
-       이미 꺼진 뒤 통보받는 것이므로 다시 정지 요청을 보내지 않고 화면만 맞춘다. */
-    window.__nativeStopped = function(){
-      try {
-        if (!running) return; // 이미 정지 상태면 할 일 없음 (무한루프 방지용 안전장치이기도 함)
-        resetToStoppedUi(true);
-      } catch(e) {}
-    };
-
-    /* ---------- 저장된 설정 복원 ---------- */
-    (function restoreSettings(){
-      const s = loadSettings();
-      if (!s) return;
-
-      // 부위
-      if (s.part){
-        const partBtn = el.partGrid.querySelector('.part-btn[data-part="' + s.part + '"]');
-        if (partBtn){
-          el.partGrid.querySelectorAll('.part-btn').forEach(b => b.classList.remove('active'));
-          partBtn.classList.add('active');
-          selectedPart = s.part;
-        }
-      }
-
-      // 자세 모드
-      if (s.mode){
-        const modeBtn = el.modeGrid.querySelector('.mode-btn[data-mode="' + s.mode + '"]');
-        if (modeBtn){
-          el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
-          modeBtn.classList.add('active');
-          mode = s.mode;
-        }
-      }
-
-      // 알림 간격
-      if (s.interval){
-        const intBtn = el.grid.querySelector('.interval-btn[data-min="' + s.interval + '"]');
-        if (intBtn){
-          el.grid.querySelectorAll('.interval-btn').forEach(b => b.classList.remove('active'));
-          intBtn.classList.add('active');
-          intervalMin = s.interval;
-          remainingSec = intervalMin * 60;
-        }
-      }
-
-      // 알림음
-      if (typeof s.sound === 'boolean' && soundGridEl){
-        soundEnabled = s.sound;
-        soundGridEl.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
-        const sndBtn = soundGridEl.querySelector('.mode-btn[data-sound="' + (s.sound ? 'on' : 'off') + '"]');
-        if (sndBtn) sndBtn.classList.add('active');
-      }
-    })();
-
-    /* ---------- 누적 사용 기록 표시 ---------- */
-    renderStats();
-
-    /* ---------- 이용 안내 아코디언 ---------- */
-    const infoAccordionEl = document.getElementById('infoAccordion');
-    const infoToggleEl = document.getElementById('infoToggle');
-    if (infoAccordionEl && infoToggleEl){
-      infoToggleEl.addEventListener('click', () => {
-        const willOpen = !infoAccordionEl.classList.contains('open');
-        infoAccordionEl.classList.toggle('open', willOpen);
-        infoToggleEl.setAttribute('aria-expanded', String(willOpen));
-      });
-    }
-
-
-    /* ============================================================
-       네이티브(안드로이드) 연동
-       ============================================================ */
-
-    function nativeStart(){
-      if (!IS_NATIVE) return;
-      try {
-        AndroidBridge.startAlarm(selectedPart, mode, intervalMin, speechRate, soundEnabled);
-      } catch(e) {}
-    }
-    function nativeStop(){
-      if (!IS_NATIVE) return;
-      try { AndroidBridge.stopAlarm(); } catch(e) {}
-    }
-    function nativeRescheduleIn(seconds){
-      if (!IS_NATIVE) return;
-      try { AndroidBridge.rescheduleIn(seconds); } catch(e) {}
-    }
-
-    window.__nativeAlert = function(payload){
-      try {
-        const tip = { title: payload.title, text: payload.text };
-        currentTip = tip;
-        el.overlayTitle.textContent = tip.title;
-        el.overlayText.textContent = tip.text;
-        el.overlay.classList.add('show');
-        if (captionCurrentEl) captionCurrentEl.textContent = '준비 중…';
-        renderCaptionDots(splitPhrases(tip.text).length, -1);
-
-        if (payload.isTest){
-          el.statusWord.textContent = '테스트 재생 중';
-          el.statusWord.className = 'status-word drift';
-          return;
-        }
-
-        todayCount += 1;
-        renderStats();
-        el.statusWord.textContent = '안내 중';
-        el.statusWord.className = 'status-word drift';
-        if (running && !paused){
-          nextAlertAt = Date.now() + intervalMin * 60 * 1000;
-          syncRemaining();
-          updateCountdown();
-        }
-      } catch(e) {}
-    };
-
-    window.__nativePhrase = function(payload){
-      try {
-        const idx = payload.index;
-        const total = payload.total;
-        renderCaptionDots(total, idx);
-        if (idx < total && payload.text){
-          setCaption(payload.text);
-        }
-      } catch(e) {}
-    };
-
-    function showCaptionsOnly(text){
-      const allPhrases = splitPhrases(text);
-      if (!allPhrases.length) return;
-      captionCancelled = false;
-      currentCaptionTimers.forEach(id => clearTimeout(id));
-      currentCaptionTimers = [];
-      const msPerChar = 165 / Math.max(speechRate, 0.4);
-      const gapMs = 230 / Math.max(speechRate, 0.4);
-      const BEEP_SLOT_MS = 2400;
-      let t = 0;
-      allPhrases.forEach((p, idx) => {
-        const isSilent = (p === '하나 둘');
-        const id = setTimeout(() => {
-          if (captionCancelled) return;
-          renderCaptionDots(allPhrases.length, idx);
-          setCaption(p);
-        }, t);
-        currentCaptionTimers.push(id);
-        t += isSilent ? BEEP_SLOT_MS : (p.length * msPerChar + gapMs);
-      });
-      const doneId = setTimeout(() => {
-        if (captionCancelled) return;
-        renderCaptionDots(allPhrases.length, allPhrases.length);
-      }, t);
-      currentCaptionTimers.push(doneId);
-    }
-
-    function nativeResync(){
-      if (!IS_NATIVE) return;
-      renderStats();
-      try {
-        if (!AndroidBridge.isRunning()) return;
-        const at = parseInt(AndroidBridge.getNextAlertAt(), 10);
-        if (at > 0){
-          nextAlertAt = at;
-          syncRemaining();
-          updateCountdown();
-        }
-      } catch(e) {}
-    }
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') nativeResync();
-    });
-    window.addEventListener('focus', nativeResync);
-
-    if (IS_NATIVE){
-      document.addEventListener('DOMContentLoaded', applyNativeCopy);
-      applyNativeCopy();
-      restoreNativeRunningState();
-    }
-
-    /**
-     * 앱이 다시 열릴 때(스와이프 종료 후 재실행, 재부팅 후 등) 화면의 시작/정지 상태는
-     * 항상 "정지됨"으로 초기화되지만, 실제로는 안드로이드가 백그라운드에서 계속
-     * 알람을 진행 중일 수 있다. 그 경우 화면이 실제 상태를 반영하지 못해
-     * "정지 버튼이 비활성화된 채로 알람만 계속 울리는" 것처럼 보이는 문제가 있었다.
-     * 여기서 네이티브의 실제 상태를 확인해 화면을 정확히 맞춘다.
-     */
-    function restoreNativeRunningState(){
-      try {
-        if (!AndroidBridge.isRunning()) return; // 실제로도 정지 상태면 화면 그대로 둠(정상)
-
-        running = true;
-        paused = false;
-        el.startBtn.disabled = true;
-        el.pauseBtn.disabled = false;
-        el.pauseBtn.textContent = '일시정지';
-        el.stopBtn.disabled = false;
-        el.grid.querySelectorAll('.interval-btn').forEach(b => b.disabled = true);
-        el.modeGrid.querySelectorAll('.mode-btn').forEach(b => b.disabled = true);
-        document.querySelectorAll('.part-btn').forEach(b => b.disabled = true);
-        if (fullTestBtnEl) fullTestBtnEl.disabled = true;
-
-        const at = parseInt(AndroidBridge.getNextAlertAt(), 10);
-        if (at > 0){
-          nextAlertAt = at;
-          syncRemaining();
-          updateCountdown();
-        }
-        clearInterval(timerId);
-        timerId = setInterval(tick, 1000);
-        requestWakeLock();
-      } catch(e) {}
-    }
-    function applyNativeCopy(){
-      const note = document.querySelector('.info-item');
-      if (note) {
-        note.innerHTML = '<b>안내</b> — 화면을 꺼두거나 다른 앱을 사용 중이어도 정해진 시각에 알려드립니다. 알림이 오지 않으면 휴대폰 설정에서 자세쌤의 알림과 배터리 최적화 예외를 허용해 주세요.';
-      }
-      const notifCard = document.querySelector('.notif-row');
-      if (notifCard) notifCard.style.display = 'none';
-    }
-
-    /* ---------- 서비스워커 등록 (PWA 설치/오프라인) ---------- */
-    if ('serviceWorker' in navigator && !(typeof IS_NATIVE !== 'undefined' && IS_NATIVE)){
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').catch(() => {
-          /* 등록 실패해도 앱 동작에는 영향 없음 */
-        });
-      });
-    }
+  }
 </script>
 
 </body>
